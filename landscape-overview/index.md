@@ -23,6 +23,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis fugit repellend
 {% capture subsection2 %}{% include /content/1.1_subsection2.md %}{% endcapture %}
   {{ subsection2 | markdownify }}
 
+{% capture fakegraphic %}{% include /fakegraphic.html %}{% endcapture %}
+{{ fakegraphic | markdownify }}
+
 </section>
 
 <section id="subsection3">

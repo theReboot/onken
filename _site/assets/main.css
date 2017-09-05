@@ -161,7 +161,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .mainNav { display: flex; justify-content: flex-end; line-height: 1; }
 .mainNav a { margin-left: 3rem; text-decoration: none; }
 
-.mainNav__preTitle { display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; }
+.mainNav__preTitle { display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: 1rem; letter-spacing: 2px; opacity: .4; text-transform: uppercase; }
 
 .mainNav__title { font-size: 1.2rem; }
 
@@ -174,7 +174,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 
 .toc ul { font-family: "freight-text-pro", serif; font-size: 1.2rem; }
 
-.toc__preTitle { display: block; text-transform: uppercase; letter-spacing: 3px; font-family: "franklin-gothic-urw", sans-serif; }
+.toc__preTitle { display: block; font-family: "franklin-gothic-urw", sans-serif; letter-spacing: 3px; text-transform: uppercase; opacity: .4; }
 
 .toc__title { display: inline-block; border-bottom: 1px solid #fff; color: #ecef86; font-size: 1.5rem; padding: 0 0 .6rem 0; }
 

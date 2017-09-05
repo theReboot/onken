@@ -107,6 +107,7 @@ nav {
   font-family: $sansSerif;
   font-size: 1rem;
   letter-spacing: 2px;
+  opacity: .4;
   text-transform: uppercase;
 }
 
@@ -159,9 +160,10 @@ nav {
 
 .toc__preTitle {
   display: block;
-  text-transform: uppercase;
-  letter-spacing: 3px;
   font-family: $sansSerif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: .4;
 }
 
 .toc__title {
