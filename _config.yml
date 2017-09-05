@@ -25,5 +25,5 @@ github_username:  theReboot
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
