@@ -27,6 +27,3 @@ github_username:  theReboot
 markdown: kramdown
 gems:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
