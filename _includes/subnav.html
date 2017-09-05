@@ -1,0 +1,13 @@
+<nav class="toc">
+{% for item in site.data.navigation.toc %}
+{% if item.url == page.url %}
+  <span class="toc__preTitle">{{ item.preTitle }}</span>
+  <span class="toc__title">{{ item.page }}</span>
+  <ul>
+    {% for entry in item.subpageitems %}
+      <li><a href="#{{ entry.anchorurl }}">{{ entry.section }}</a></li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% endfor %}
+</nav>
