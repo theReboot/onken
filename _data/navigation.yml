@@ -1,7 +1,7 @@
 toc:
   - page: Landscape Overview
     preTitle: Part 1
-    url: /landscape-overview/
+    url: landscape-overview
     subpageitems:
       - section: Introduction
         anchorurl: introduction
@@ -11,7 +11,7 @@ toc:
         anchorurl: subsection3
   - page: Landscape Assesment
     preTitle: Part 2
-    url: /landscape-assessment/
+    url: landscape-assessment
     subpageitems:
       - section: Piece 1
         anchorurl: piece1
@@ -21,7 +21,7 @@ toc:
         anchorurl: piece3
   - page: Opportunities
     preTitle: Part 3
-    url: /opportunities/
+    url: opportunities
     subpageitems:
       - section: Widget 1
         anchorurl: widget1
