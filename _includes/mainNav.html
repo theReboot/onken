@@ -1,6 +1,6 @@
 <nav class="mainNav">
 {% for item in site.data.navigation.toc %}
-  <a href="{{ site.baseurl }}/{{ item.url }}">
+  <a href="{{ site.baseurl }}{{ item.url }}">
     <span class="mainNav__preTitle">{{ item.preTitle }}</span>
     <span class="mainNav__title">{{ item.page }}</span>
   </a>
