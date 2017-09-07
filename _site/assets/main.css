@@ -152,6 +152,8 @@ header { background: #E8E8E8; border-bottom: 0.8rem solid #7bba87; padding: 1.5r
 
 h1 { font-family: "franklin-gothic-urw", sans-serif; font-size: 3rem; font-weight: 500; line-height: 1; }
 
+h2 { border-bottom: 1px solid #fff; color: #ecef86; font-family: "franklin-gothic-urw", sans-serif; font-size: 2.5rem; font-weight: 500; line-height: 1; padding: 0 0 1rem 0; }
+
 p { font-size: 1.4rem; line-height: 1.4; margin: 0 0 1rem 0; }
 
 ul { line-height: 1.5; }
@@ -165,7 +167,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 
 .mainNav__title { font-size: 1.2rem; }
 
-.toc { position: sticky; top: 1.8rem; margin: 0; min-height: 6rem; width: 33%; color: white; z-index: 0; float: left; }
+.toc { position: sticky; top: 1.8rem; margin: 0; min-height: 6rem; width: calc(33% - 2rem); color: white; z-index: 0; float: left; }
 @media (max-width: 600px) { .toc { position: static; width: 100%; } }
 .toc a { transition: .4s all ease; text-decoration: none; }
 .toc a:link, .toc a:visited, .toc a:active { color: #fff; }

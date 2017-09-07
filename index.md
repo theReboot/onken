@@ -5,4 +5,4 @@
 layout: home
 ---
 
-This is the homepage
+There is some great and powerful content here on the homepage. But it hasn't arrived yet.

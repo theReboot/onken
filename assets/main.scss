@@ -71,6 +71,16 @@ h1 {
   line-height: 1;
 }
 
+h2 {
+  border-bottom: 1px solid $white;
+  color: $yellow;
+  font-family: $sansSerif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0 0 1rem 0;
+}
+
 p {
   font-size: 1.4rem;
   line-height: 1.4;
@@ -120,7 +130,7 @@ nav {
   top: 1.8rem;
   margin: 0;
   min-height: 6rem;
-  width: 33%;
+  width: calc(33% - #{$columnPad});
   color: white;
   z-index: 0;
   float: left;

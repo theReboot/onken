@@ -1,27 +1,29 @@
 toc:
-  - page: Landscape Overview
+  - page: Why Fund Kenyan Media?
     preTitle: Part 1
-    url: /landscape-overview/
+    url: /why-fund-kenyan-media/
     subpageitems:
-      - section: Introduction
-        anchorurl: introduction
-      - section: Sub Section 2
-        anchorurl: subsection2
-      - section: Sub Section 3
-        anchorurl: subsection3
-  - page: Landscape Assesment
+      - section: About this Report
+        anchorurl: aboutThisReport
+      - section: Theory of Change
+        anchorurl: theoryOfChange
+      - section: Understanding Kenyan Media
+        anchorurl: understandingKenyanMedia
+  - page: The Accountability Ecosystem in Kenya Today
     preTitle: Part 2
-    url: /landscape-assessment/
+    url: /accountability-ecosystem-kenya/
     subpageitems:
-      - section: Piece 1
-        anchorurl: piece1
-      - section: Piece 2
-        anchorurl: piece2
-      - section: Piece 3
-        anchorurl: piece3
-  - page: Opportunities
+      - section: Constituent 1 Government
+        anchorurl: government
+      - section: Constituent 2 Citizens
+        anchorurl: citizens
+      - section: Constituent 3 Civil Society
+        anchorurl: civilSociety
+      - section: Constituent 4 Media
+        anchorurl: media
+  - page: Opportunities/Recommendations
     preTitle: Part 3
-    url: /opportunities/
+    url: /opportunities-recommendations/
     subpageitems:
       - section: Widget 1
         anchorurl: widget1
