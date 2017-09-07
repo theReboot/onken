@@ -24,12 +24,16 @@ Donor interventions create new pressures and incentives, which will either compl
 
 -   That's why it's useful to look at the findings this way!
 
+<div class="fullWidth"></div>
+
 <section id="government">
 
 {% capture government %}{% include /content/2.1_government.md %}{% endcapture %}
   {{ government | markdownify }}
 
 </section>
+
+<div class="fullWidth"></div>
 
 <section id="citizens">
 
@@ -38,12 +42,16 @@ Donor interventions create new pressures and incentives, which will either compl
 
 </section>
 
+<div class="fullWidth"></div>
+
 <section id="civilSociety">
 
 {% capture civilSociety %}{% include /content/2.3_civilSociety.md %}{% endcapture %}
   {{ civilSociety | markdownify }}
 
 </section>
+
+<div class="fullWidth"></div>
 
 <section id="media">
 
