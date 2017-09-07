@@ -36,7 +36,7 @@ permalink: /why-fund-kenyan-media/
 
 <section id="aboutThisReport">
 
-{% capture aboutThisReport %}{% include /content/1.1_AboutThisReport.md %}{% endcapture %}
+{% capture aboutThisReport %}{% include /content/1.1_aboutThisReport.md %}{% endcapture %}
   {{ aboutThisReport | markdownify }}
 
 </section>
