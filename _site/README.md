@@ -2,6 +2,22 @@
 
 ## Structure
 
+### Fly-Out Features
+Throughout the report there are links to features, case studies, etc. that are separate from the narrative of the report. These features use the `flyOut.html` include, and pass in the Markdown file like this:
+
+Include content as a variable
+```
+{% capture variableName %}{% include /content/0.0.1_variableName.md %}{% endcapture %}
+```
+Markdownify the variable
+```
+{% capture variableName %}{{ variableName | markdownify }}{% endcapture %}
+```
+Include the flyOut function and pass in a title, and the variable content
+```
+{% include flyOut.html title="Case Study: A Closer Look At Fly-Out Features" content=variableName %}
+```
+
 ### Navigation
 
 `_data/navigation.yml` is used to control the site's navigation. The top-level navigation, and sub-section navigation is managed in the same way. Sub-section URLs should point to the named anchor tags within each section's Markdown file.

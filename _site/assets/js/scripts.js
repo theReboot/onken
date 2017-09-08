@@ -16,7 +16,6 @@ $(document).ready(function(){
      */
     $(".toc a").click(function(evn){
         evn.preventDefault();
-        console.log(evn);
         $('html,body').scrollTo(this.hash, this.hash);
     });
 
@@ -57,4 +56,14 @@ $(document).ready(function(){
             }
         }
     });
+
+    // fly out sidebar
+    $( ".flyOutButton, .flyOut__close").click(function() {
+      $(this).parents('.flyOut__wrap').find('.flyOut').toggleClass('flyOut__active')
+    })
+});
+
+// Leave fly-out feature when esc key is pressed
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) $('.flyOut').removeClass('flyOut__active');
 });
