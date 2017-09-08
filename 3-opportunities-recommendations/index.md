@@ -4,7 +4,7 @@ title: Opportunities/Recommendations
 permalink: /opportunities-recommendations/
 ---
 
-# Opportunities/Recommendations
+# Opportunities & Recommendations
 
 We have organized this section according to ON's media funding strategies. These recommendations are interconnected---they are interventions in a system, and we recognize that each one will influence multiple actors. Our goal is to build on existing positive "coping strategies" or to correct negative ones.
 

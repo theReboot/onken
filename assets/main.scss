@@ -164,10 +164,10 @@ nav {
     }
 
     &:first-child {
-      margin: 0;
+      margin-left: 0;
 
       @include breakpoint('mobile') {
-        margin: 0 auto 1rem;
+        margin-left: auto;
       }
     }
 
@@ -300,11 +300,12 @@ nav {
 }
 
 .footer__logos__logo {
-  width: 33%;
+  width: 29%;
   max-width: 16rem;
 
   @include breakpoint('mobile') {
     margin: 1rem auto;
+    padding: 0;
     width: 100%;
   }
 }
