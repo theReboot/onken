@@ -208,10 +208,60 @@ nav {
   background: $grey;
   min-height: 12rem;
   margin: 5rem 0 0 0;
+  padding: 4rem 0 6rem;
 }
 
-.footer__logo {
-  width: 15rem;
+.footer__meta {
+  display: flex;
+  color: $black;
+
+  @include breakpoint('mobile') {
+    flex-direction: column;
+  }
+}
+
+.footer__meta__desc {
+  font-size: 1.2rem;
+  flex: 2;
+  line-height: 1.4;
+  margin-right: $columnPad;
+
+  @include breakpoint('mobile') {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer__meta__nav {
+  flex: 1;
+  font-size: 1.4rem;
+
+  a {
+    border-top: 1px solid $black;
+    display: block;
+    padding: 1rem 0;
+  }
+}
+
+.footer__logos {
+  border-top: 1px solid $black;
+  display: flex;
+  margin: 1rem auto 0;
+  justify-content: space-between;
+  padding: 2rem 0 0 0;
+
+  @include breakpoint('mobile') {
+    flex-direction: column;
+  }
+}
+
+.footer__logos__logo {
+  width: 33%;
+  max-width: 16rem;
+
+  @include breakpoint('mobile') {
+    margin: 1rem auto;
+    width: 100%;
+  }
 }
 
 .button {
