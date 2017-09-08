@@ -68,6 +68,10 @@ main {
   position: relative;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 // typography
 
 h1,
@@ -324,6 +328,10 @@ nav {
   left: 0;
   z-index: 999999;
   pointer-events: none;
+
+  &.flyOut__active {
+    pointer-events: auto;
+  }
 }
 
 .flyOut__bg {
@@ -362,7 +370,6 @@ nav {
 
   .flyOut__active & {
     left: 0;
-    pointer-events: all;
   }
 }
 

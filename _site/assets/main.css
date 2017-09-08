@@ -153,6 +153,8 @@ body { background: #2e2f3a; color: #fff; font-family: "freight-text-pro", serif;
 
 .fullWidth { background: #7bba87; height: 20rem; margin: 2rem 0 0; position: relative; }
 
+.no-scroll { overflow: hidden; }
+
 h1, h2, h3, h4, h5, h6 { font-family: "franklin-gothic-urw", sans-serif; }
 
 h1 { font-size: 3rem; font-weight: 500; line-height: 1; }
@@ -217,6 +219,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .button { border: 2px solid #fff; cursor: pointer; font-size: 2rem; padding: 1.5rem; }
 
 .flyOut { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 0; position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 999999; pointer-events: none; }
+.flyOut.flyOut__active { pointer-events: auto; }
 
 .flyOut__bg { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.75); opacity: 0; -webkit-transition: opacity .3s; transition: opacity .3s; }
 .flyOut__active .flyOut__bg { opacity: 1; }
@@ -225,6 +228,6 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .flyOut__active .flyOut__inner { left: 0; }
 
 .flyOut__inner__text { padding: 2rem 1.5rem; }
-.flyOut__active .flyOut__inner__text { left: 0; pointer-events: all; }
+.flyOut__active .flyOut__inner__text { left: 0; }
 
 .flyOut__close { background: #E8E8E8; border: 2px solid #000; cursor: pointer; display: block; padding: 1rem; position: fixed; }

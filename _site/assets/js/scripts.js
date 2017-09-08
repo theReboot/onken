@@ -60,10 +60,19 @@ $(document).ready(function(){
     // fly out sidebar
     $( ".flyOutButton, .flyOut__close").click(function() {
       $(this).parents('.flyOut__wrap').find('.flyOut').toggleClass('flyOut__active')
+      if($(this).parents('.flyOut__wrap').find('.flyOut').hasClass('flyOut__active')) {
+        $('body').addClass('no-scroll');
+      }
+      else {
+        $('body').removeClass('no-scroll');
+      }
     })
 });
 
 // Leave fly-out feature when esc key is pressed
 $(document).keyup(function(e) {
-  if (e.keyCode === 27) $('.flyOut').removeClass('flyOut__active');
+  if (e.keyCode === 27) {
+    $('.flyOut').removeClass('flyOut__active');
+    $('body').removeClass('no-scroll');
+  }
 });
