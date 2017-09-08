@@ -27,3 +27,4 @@ github_username:  theReboot
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - octopress-autoprefixer
