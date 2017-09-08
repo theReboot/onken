@@ -28,10 +28,17 @@ body {
   }
 }
 
-header {
+.header {
    background: $grey;
    border-bottom: .8rem solid $green;
    padding: 1.5rem 0;
+}
+
+.header__logo {
+  display: block;
+  margin: auto;
+  padding: 1.5rem 0;
+  text-align: center;
 }
 
 main {
@@ -111,6 +118,20 @@ ul {
   line-height: 1.5;
 }
 
+// typography for the flyOut box
+.flyOut__inner__text {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $black;
+    font-family: $sansSerif;
+  }
+}
+
 // navigation
 
 nav {
@@ -119,12 +140,32 @@ nav {
 
 .mainNav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   line-height: 1;
+  padding: 1rem 0;
+  width: 100%;
+
+  @include breakpoint('mobile') {
+    flex-direction: column;
+  }
 
   a {
-    margin-left: 3rem;
+    width: 33%;
+    margin: 0 0 0 $columnPad;
     text-decoration: none;
+
+    @include breakpoint('mobile') {
+      margin: 0 auto 1rem;
+      width: 100%;
+    }
+
+    &:first-child {
+      margin: 0;
+
+      @include breakpoint('mobile') {
+        margin: 0 auto 1rem;
+      }
+    }
 
     // &:any-link {
     //
@@ -266,6 +307,7 @@ nav {
 
 .button {
   border: 2px solid $white;
+  cursor: pointer;
   font-size: 2rem;
   padding: 1.5rem;
 }
@@ -316,6 +358,7 @@ nav {
 }
 
 .flyOut__inner__text {
+  padding: 2rem 1.5rem;
 
   .flyOut__active & {
     left: 0;
@@ -324,6 +367,10 @@ nav {
 }
 
 .flyOut__close {
+  background: $grey;
+  border: 2px solid $black;
+  cursor: pointer;
   display: block;
+  padding: 1rem;
   position: fixed;
 }
