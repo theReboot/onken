@@ -28,4 +28,3 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - octopress-autoprefixer
-  - jekyll-figure
