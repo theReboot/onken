@@ -144,7 +144,7 @@ body { background: #2e2f3a; color: #f7f7f7; font-family: "freight-text-pro", ser
 
 .header { background: #E8E8E8; border-bottom: 0.8rem solid #7bba87; padding: 1.5rem 0; }
 
-.header__logo { display: block; margin: auto; padding: 1.5rem 0; text-align: center; }
+.header__logo { display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: 2rem; font-weight: 700; margin: auto; opacity: .2; padding: 0 0 1.5rem; text-align: center; text-decoration: none; }
 
 .content > *:not(section), .content section > * { margin-left: 33%; }
 @media (max-width: 600px) { .content > *:not(section), .content section > * { margin-left: auto; } }
@@ -175,16 +175,18 @@ ul { line-height: 1.5; }
 
 nav { font-family: "franklin-gothic-urw", sans-serif; }
 
-.mainNav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; line-height: 1; padding: 1rem 0; width: 100%; }
+.mainNav { border-top: 1px solid #9f9fa5; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; line-height: 1; padding: 0 0 1rem; width: 100%; }
 @media (max-width: 600px) { .mainNav { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
-.mainNav a { width: 33%; margin: 0 0 0 2rem; text-decoration: none; }
+.mainNav a { width: 33%; margin: 0 0 0 2rem; padding: 1rem 0 0 0; position: relative; text-decoration: none; }
 @media (max-width: 600px) { .mainNav a { margin: 0 auto 1rem; width: 100%; } }
 .mainNav a:first-child { margin-left: 0; }
 @media (max-width: 600px) { .mainNav a:first-child { margin-left: auto; } }
+.mainNav a:first-child::after { background: #313131; content: ''; height: 0rem; left: -1rem; position: absolute; top: 0; width: 0px; }
+.mainNav a::after { background: #9f9fa5; content: ''; height: 1.5rem; left: -1rem; position: absolute; top: 0; width: 1px; }
 
 .mainNav__preTitle { display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: 1rem; letter-spacing: 2px; opacity: .4; text-transform: uppercase; }
 
-.mainNav__title { font-size: 1.2rem; }
+.mainNav__title { display: block; font-size: 1.2rem; max-width: 16rem; }
 
 .content .toc.toc { background: #2e2f3a; border-left: 1rem solid #ecef86; color: white; float: left; margin: 2rem 0 0 0; padding: 1.8rem 2.5rem; position: -webkit-sticky; position: sticky; top: 1.8rem; width: calc(33% - 2rem); z-index: 0; }
 @media (max-width: 600px) { .content .toc.toc { position: static; width: 100%; } }

@@ -26,16 +26,21 @@ body {
 }
 
 .header {
-   background: $grey;
+   background: $lightGrey;
    border-bottom: .8rem solid $green;
    padding: 1.5rem 0;
 }
 
 .header__logo {
   display: block;
+  font-family: $sansSerif;
+  font-size: 2rem;
+  font-weight: 700;
   margin: auto;
-  padding: 1.5rem 0;
+  opacity: .2;
+  padding: 0 0 1.5rem;
   text-align: center;
+  text-decoration: none;
 }
 
 main {
@@ -141,10 +146,11 @@ nav {
 }
 
 .mainNav {
+  border-top: 1px solid $grey;
   display: flex;
   justify-content: space-between;
   line-height: 1;
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   width: 100%;
 
   @include breakpoint('mobile') {
@@ -152,8 +158,11 @@ nav {
   }
 
   a {
+    // border-left: 1px solid $black;
     width: 33%;
     margin: 0 0 0 $columnPad;
+    padding: 1rem 0 0 0;
+    position: relative;
     text-decoration: none;
 
     @include breakpoint('mobile') {
@@ -167,6 +176,28 @@ nav {
       @include breakpoint('mobile') {
         margin-left: auto;
       }
+
+      // no border on the first child
+      &::after {
+        background: $black;
+        content: '';
+        height: 0rem;
+        left: -1rem;
+        position: absolute;
+        top: 0;
+        width: 0px;
+      }
+    }
+
+    // this creates the left border on menu items, with a fixed height
+    &::after {
+      background: $grey;
+      content: '';
+      height: 1.5rem;
+      left: -1rem;
+      position: absolute;
+      top: 0;
+      width: 1px;
     }
 
     // &:any-link {
@@ -185,7 +216,9 @@ nav {
 }
 
 .mainNav__title {
+  display: block;
   font-size: 1.2rem;
+  max-width: 16rem;
 }
 
 // added extra classes for specificity
@@ -266,7 +299,7 @@ nav {
 // footer
 
 .footer {
-  background: $grey;
+  background: $lightGrey;
   min-height: 12rem;
   margin: 5rem 0 0 0;
   padding: 4rem 0 6rem;
@@ -367,7 +400,7 @@ nav {
 }
 
 .flyOut__inner {
-  background: $grey;
+  background: $lightGrey;
   color: $black;
   left: 100%;
   margin-left: auto;
@@ -391,7 +424,7 @@ nav {
 }
 
 .flyOut__close {
-  background: $grey;
+  background: $lightGrey;
   border: 2px solid $black;
   cursor: pointer;
   display: block;
