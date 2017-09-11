@@ -2,6 +2,18 @@
 
 ## Structure
 
+### Images
+
+Images can be added to markdown files with the figure element via the [`jekyll-figure` plugin](https://github.com/paulrobertlloyd/jekyll-figure).
+
+```
+{% figure caption: "This is the caption" | class: "Classname" %}
+![Image]({{ site.baseurl }}/assets/img/testimage.jpg)
+{% endfigure %}
+```
+
+Figures can be used without a class, or with `.fullWidth`.
+
 ### Fly-Out Features
 Throughout the report there are links to features, case studies, etc. that are separate from the narrative of the report. These features use the `flyOut.html` include, and pass in the Markdown file like this:
 

@@ -63,11 +63,23 @@ section {
   padding-top: 1.8rem;
 }
 
+figure {
+  margin: 2rem 0 4rem;
+
+  figcaption {
+    font-family: $sansSerif;
+    margin: 1rem 0 2rem 0;
+    text-align: right;
+  }
+
+  & > img {
+    width: 100%;
+  }
+}
+
 // doubled-up for specificity
 .fullWidth.fullWidth {
-  background: $green;
-  height: 20rem;
-  margin: 0;
+  margin-left: 0;
   position: relative;
 }
 
@@ -160,6 +172,7 @@ nav {
   a {
     // border-left: 1px solid $black;
     width: 33%;
+    color: $green;
     margin: 0 0 0 $columnPad;
     padding: 1rem 0 0 0;
     position: relative;
@@ -198,26 +211,34 @@ nav {
       position: absolute;
       top: 0;
       width: 1px;
+
+      // hide the border on mobile
+      @include breakpoint('mobile') {
+        height: 0;
+        width: 0;
+      }
     }
 
-    // &:any-link {
-    //
-    // }
+    // active top nav item
+    &.active {
+      color: $darkBlue;
+    }
   }
 }
 
 .mainNav__preTitle {
+  color: $grey;
   display: block;
   font-family: $sansSerif;
   font-size: 1rem;
   letter-spacing: 2px;
-  opacity: .4;
   text-transform: uppercase;
 }
 
 .mainNav__title {
   display: block;
   font-size: 1.2rem;
+  font-weight: 700;
   max-width: 16rem;
 }
 
@@ -431,4 +452,10 @@ nav {
   padding: 1rem;
   position: fixed;
   top: 1rem;
+}
+
+// graphic styles
+
+.ai2html {
+  font-family: $sansSerif;
 }
