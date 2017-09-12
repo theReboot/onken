@@ -92,7 +92,15 @@ figure {
 // typekit font event:
 // https://helpx.adobe.com/typekit/using/font-events.html
 .wf-loading {
-  visibility: hidden;
+  a,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    visibility: hidden;
+  }
 }
 
 h1,
