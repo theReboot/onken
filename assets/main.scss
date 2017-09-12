@@ -582,14 +582,15 @@ nav {
 // timeline styles
 
 .timeline {
+  align-items: top;
+  background: $lightGrey;
+  color: $black;
+  display: flex;
+  height: $timelineHeight;
+  margin: 50px 5%;
+  position: relative;
   width: 100%;
   max-width: 1200px;
-  height: $timelineHeight;
-  background: $lightGrey;
-  margin: 50px 5%;
-  display: flex;
-  align-items: top;
-  position: relative;
 
   @include breakpoint(mobile) {
     height: $timelineHeightMobile;
@@ -634,7 +635,7 @@ nav {
   text-transform: uppercase;
 }
 
-.viewport {
+.timeline__viewport {
   overflow: scroll;
   white-space: nowrap;
   width: 100%;

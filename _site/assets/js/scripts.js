@@ -130,3 +130,50 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+// timeline scripts
+
+// https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
+
+(function($) {
+
+  $.fn.visible = function(partial) {
+
+      var $t            = $(this),
+          $w            = $('.timelineWindow'),
+          viewLeft       = $w.scrollLeft(),
+          viewRight    = viewLeft + $w.width(),
+          _left          = $t.offset().left,
+          _right       = _left + $t.width(),
+          compareLeft    = partial === true ? _right : _left,
+          compareRight = partial === true ? _left : _right;
+
+    return ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+
+  };
+
+})(jQuery);
+
+var win = $('.timeline__viewport');
+var allMods = $('.timeline__section');
+
+// Already visible modules
+allMods.each(function(i, el) {
+  var el = $(el);
+  if (el.visible(true)) {
+    el.addClass("active");
+  }
+});
+
+win.scroll(function(event) {
+
+  allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("active");
+    } else {
+      el.removeClass("active");
+    }
+  });
+
+});

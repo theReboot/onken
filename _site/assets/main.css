@@ -273,7 +273,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 @media (max-width: 768px) { .g-ON_matrix-mobile { display: none; } }
 @media (max-width: 600px) { .g-ON_matrix-mobile { display: block; } }
 
-.timeline { width: 100%; max-width: 1200px; height: 600px; background: #E8E8E8; margin: 50px 5%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: top; -ms-flex-align: top; align-items: top; position: relative; }
+.timeline { -webkit-box-align: top; -ms-flex-align: top; align-items: top; background: #E8E8E8; color: #313131; display: -webkit-box; display: -ms-flexbox; display: flex; height: 600px; margin: 50px 5%; position: relative; width: 100%; max-width: 1200px; }
 @media (max-width: 600px) { .timeline { height: 480px; } }
 
 .top { position: absolute; top: 0; }
@@ -286,7 +286,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 
 .timeline__scale__label { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); position: absolute; left: -50px; top: calc(50% - 30px); font-family: "franklin-gothic-urw", sans-serif; text-transform: uppercase; }
 
-.viewport { overflow: scroll; white-space: nowrap; width: 100%; }
+.timeline__viewport { overflow: scroll; white-space: nowrap; width: 100%; }
 
 .timelineWindow { width: 50%; height: 600px; z-index: 0; position: absolute; }
 @media (max-width: 600px) { .timelineWindow { height: 480px; } }
