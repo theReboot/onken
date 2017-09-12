@@ -67,6 +67,7 @@ body {
 
   @include breakpoint('mobile') {
     height: auto;
+    position: static;
   }
 }
 

@@ -151,7 +151,7 @@ body { background: #2e2f3a; color: #f7f7f7; font-family: "freight-text-pro", ser
 @media (max-width: 600px) { .header--down { height: auto; position: static; } }
 
 .header--up { border: 0; height: 0; position: fixed; top: 0; padding: 0; width: 100%; z-index: 2; }
-@media (max-width: 600px) { .header--up { height: auto; } }
+@media (max-width: 600px) { .header--up { height: auto; position: static; } }
 
 .header__logo { display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: 2rem; font-weight: 700; margin: auto; opacity: .2; padding: 0 0 1.5rem; text-align: center; text-decoration: none; }
 .header--onlyNav .header__logo { display: none; }
