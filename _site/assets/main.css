@@ -145,12 +145,16 @@ body { background: #2e2f3a; color: #f7f7f7; font-family: "freight-text-pro", ser
 .header { background: #E8E8E8; border-bottom: 0.8rem solid #7bba87; padding: 1.5rem 0; -webkit-transition: .2s all ease; transition: .2s all ease; }
 
 .header__wrap { height: 13rem; }
+@media (max-width: 600px) { .header__wrap { height: auto; } }
 
 .header--down { height: 13rem; position: fixed; top: 0; width: 100%; z-index: 2; }
+@media (max-width: 600px) { .header--down { height: auto; position: static; } }
 
 .header--up { height: 0; }
+@media (max-width: 600px) { .header--up { height: auto; } }
 
 .header--onlyNav { height: 6.5rem; padding: 0; }
+@media (max-width: 600px) { .header--onlyNav { height: auto; padding: 1.5rem 0; } }
 
 .header__logo { display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: 2rem; font-weight: 700; margin: auto; opacity: .2; padding: 0 0 1.5rem; text-align: center; text-decoration: none; }
 .header--onlyNav .header__logo { display: none; }

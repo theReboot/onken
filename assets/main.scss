@@ -35,6 +35,10 @@ body {
 // this prevents the page content from jumping around when the .header height changes
 .header__wrap {
   height: $headerHeight;
+
+  @include breakpoint('mobile') {
+    height: auto;
+  }
 }
 
 .header--down {
@@ -43,15 +47,29 @@ body {
   top: 0;
   width: 100%;
   z-index: 2;
+
+  @include breakpoint('mobile') {
+    height: auto;
+    position: static;
+  }
 }
 
 .header--up {
   height: 0;
+
+  @include breakpoint('mobile') {
+    height: auto;
+  }
 }
 
 .header--onlyNav {
   height: 6.5rem;
   padding: 0;
+
+  @include breakpoint('mobile') {
+    height: auto;
+    padding: 1.5rem 0; // same as normal header
+  }
 }
 
 .header__logo {
