@@ -29,7 +29,8 @@ body {
    background: $lightGrey;
    border-bottom: .8rem solid $green;
    padding: 1.5rem 0;
-   transition: .2s all ease;
+   overflow: hidden; // this helps with the animation
+   transition: height .5s ease;
 }
 
 // this prevents the page content from jumping around when the .header height changes
@@ -42,9 +43,10 @@ body {
 }
 
 .header--down {
-  height: $headerHeight; // this is defined for the transition to animate
+  height: $headerNavHeight; // this is defined for the transition to animate
   position: fixed;
   top: 0;
+  padding: 0;
   width: 100%;
   z-index: 2;
 
@@ -55,7 +57,13 @@ body {
 }
 
 .header--up {
+  border: 0;
   height: 0;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 2;
 
   @include breakpoint('mobile') {
     height: auto;
@@ -63,13 +71,7 @@ body {
 }
 
 .header--onlyNav {
-  height: 6.5rem;
-  padding: 0;
 
-  @include breakpoint('mobile') {
-    height: auto;
-    padding: 1.5rem 0; // same as normal header
-  }
 }
 
 .header__logo {
