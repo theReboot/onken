@@ -29,6 +29,29 @@ body {
    background: $lightGrey;
    border-bottom: .8rem solid $green;
    padding: 1.5rem 0;
+   transition: .2s all ease;
+}
+
+// this prevents the page content from jumping around when the .header height changes
+.header__wrap {
+  height: $headerHeight;
+}
+
+.header--down {
+  height: $headerHeight; // this is defined for the transition to animate
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header--up {
+  height: 0;
+}
+
+.header--onlyNav {
+  height: 6.5rem;
+  padding: 0;
 }
 
 .header__logo {
@@ -41,6 +64,11 @@ body {
   padding: 0 0 1.5rem;
   text-align: center;
   text-decoration: none;
+
+  // hide logo when header is fixed and down the page
+  .header--onlyNav & {
+    display: none;
+  }
 }
 
 main {
@@ -113,8 +141,8 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -125,6 +153,11 @@ h2 {
   font-weight: 500;
   line-height: 1;
   padding: 0 0 1rem 0;
+
+  .bg--white & {
+    color: $green;
+    border-color: $grey;
+  }
 }
 
 h3 {

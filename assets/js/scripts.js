@@ -76,3 +76,57 @@ $(document).keyup(function(e) {
     $('body').removeClass('no-scroll');
   }
 });
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var headerHeight = $('.header__wrap').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    console.log("st: " + st);
+    console.log("lastScrollTop: " + lastScrollTop);
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop){
+      // Scrolling Down
+      // if we're aboe the fold
+      if (st < $(window).height()) {
+        // remove classes and treat it normally
+        $('.header').removeClass('header--down header--up header--onlyNav')
+      } else {
+        $('.header').removeClass('header--down').addClass('header--up');
+      }
+
+    } else {
+      // Scrolling Up below the fold
+      if (st + $(window).height() < $(document).height()) {
+        // if we're above the wrapper, and above the nav wrapper
+        if (st < headerHeight) {
+          $('.header').removeClass('header--down header--up header--onlyNav');
+        } else {
+          $('.header').removeClass('header--up').addClass('header--down header--onlyNav');
+        }
+      }
+    }
+
+    lastScrollTop = st;
+}
