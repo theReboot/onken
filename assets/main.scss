@@ -138,7 +138,8 @@ ul {
 }
 
 // typography for the flyOut box
-.flyOut__inner__text {
+// doubled up so it doesn't compete with ai2html graphic specificity
+.flyOut__inner__text.flyOut__inner__text {
   h1,
   h2,
   h3,
@@ -458,4 +459,46 @@ nav {
 
 .ai2html {
   font-family: $sansSerif;
+}
+
+// x & y axis labels
+.g-label {
+
+}
+
+// recommendation text
+.g-flyOutButton {
+  cursor: pointer;
+}
+
+// this shows/hides the corresponding artboard markup
+
+.g-ON_matrix-desktop {
+  @include breakpoint('tablet') {
+    display: none;
+  }
+  @include breakpoint('mobile') {
+    display: none;
+  }
+}
+
+.g-ON_matrix-tablet {
+  @include breakpoint('desktop') {
+    display: none;
+  }
+  @include breakpoint('mobile') {
+    display: none;
+  }
+}
+
+.g-ON_matrix-mobile {
+  @include breakpoint('desktop') {
+    display: none;
+  }
+  @include breakpoint('tablet') {
+    display: none;
+  }
+  @include breakpoint('mobile') {
+    display: block;
+  }
 }

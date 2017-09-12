@@ -12,4 +12,9 @@ $tablet: 768px;
       @content;
     }
   }
+  @if $point == desktop {
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
 }

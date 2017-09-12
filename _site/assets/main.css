@@ -175,7 +175,7 @@ p { font-size: 1.4rem; line-height: 1.4; margin: 0 0 1rem 0; }
 
 ul { line-height: 1.5; }
 
-.flyOut__inner__text h1, .flyOut__inner__text h2, .flyOut__inner__text h3, .flyOut__inner__text h4, .flyOut__inner__text h5, .flyOut__inner__text h6, .flyOut__inner__text p { color: #313131; font-family: "franklin-gothic-urw", sans-serif; }
+.flyOut__inner__text.flyOut__inner__text h1, .flyOut__inner__text.flyOut__inner__text h2, .flyOut__inner__text.flyOut__inner__text h3, .flyOut__inner__text.flyOut__inner__text h4, .flyOut__inner__text.flyOut__inner__text h5, .flyOut__inner__text.flyOut__inner__text h6, .flyOut__inner__text.flyOut__inner__text p { color: #313131; font-family: "franklin-gothic-urw", sans-serif; }
 
 nav { font-family: "franklin-gothic-urw", sans-serif; }
 
@@ -245,3 +245,15 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .flyOut__close { background: #E8E8E8; border: 2px solid #313131; cursor: pointer; display: block; padding: 1rem; position: fixed; top: 1rem; }
 
 .ai2html { font-family: "franklin-gothic-urw", sans-serif; }
+
+.g-flyOutButton { cursor: pointer; }
+
+@media (max-width: 768px) { .g-ON_matrix-desktop { display: none; } }
+@media (max-width: 600px) { .g-ON_matrix-desktop { display: none; } }
+
+@media (min-width: 769px) { .g-ON_matrix-tablet { display: none; } }
+@media (max-width: 600px) { .g-ON_matrix-tablet { display: none; } }
+
+@media (min-width: 769px) { .g-ON_matrix-mobile { display: none; } }
+@media (max-width: 768px) { .g-ON_matrix-mobile { display: none; } }
+@media (max-width: 600px) { .g-ON_matrix-mobile { display: block; } }

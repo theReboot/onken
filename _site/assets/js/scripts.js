@@ -58,7 +58,7 @@ $(document).ready(function(){
     });
 
     // fly out sidebar
-    $( ".flyOutButton, .flyOut__close").click(function() {
+    $( ".flyOutButton, .flyOut__close, .g-flyOutButton").click(function() {
       $(this).parents('.flyOut__wrap').find('.flyOut').toggleClass('flyOut__active')
       if($(this).parents('.flyOut__wrap').find('.flyOut').hasClass('flyOut__active')) {
         $('body').addClass('no-scroll');
