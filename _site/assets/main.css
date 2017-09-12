@@ -159,6 +159,8 @@ figure > img { width: 100%; }
 
 .no-scroll { overflow: hidden; }
 
+.wf-loading { visibility: hidden; }
+
 h1, h2, h3, h4, h5, h6 { font-family: "franklin-gothic-urw", sans-serif; }
 
 h1 { font-size: 3rem; font-weight: 500; line-height: 1; }
