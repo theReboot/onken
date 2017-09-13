@@ -97,9 +97,6 @@ setInterval(function() {
 function hasScrolled() {
     var st = $(this).scrollTop();
 
-    console.log("st: " + st);
-    console.log("lastScrollTop: " + lastScrollTop);
-
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
@@ -107,12 +104,15 @@ function hasScrolled() {
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop){
+
+      console.log("scroll top: " + st);
+      console.log("window height: " + $(window).height());
+      console.log("document height: " + $(document).height());
+      console.log("scroll + window = " + ($(window).height()+st));
       // Scrolling Down
       // if we're above the fold
-      if (st < $(window).height()) {
-        // remove classes and treat it normally
-        $('.header').removeClass('header--down header--up header--onlyNav')
-      } else {
+      if (st > headerHeight ) {
+        // remove header down and add header up
         $('.header').removeClass('header--down').addClass('header--up');
       }
 
@@ -121,11 +121,17 @@ function hasScrolled() {
       // if we're above the wrapper, and above the nav wrapper
       if (st < headerHeight) {
         $('.header').removeClass('header--down header--up header--onlyNav');
+      } else if ($(window).height() > st > headerHeight) {
+        console.log("bug!")
       }
       // scrolling up below the nav bar
       else {
         $('.header').removeClass('header--up').addClass('header--down header--onlyNav');
       }
+    }
+
+    if ((st + $(window).height()) == $(document).height()) {
+      $('.header').removeClass('header--up').addClass('header--down header--onlyNav');
     }
 
     lastScrollTop = st;
