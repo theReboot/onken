@@ -25,9 +25,7 @@ toc:
     preTitle: Part 3
     url: /opportunities-recommendations/
     subpageitems:
-      - section: Widget 1
+      - section: Introduction
         anchorurl: widget1
-      - section: Widget 2
-        anchorurl: widget2
-      - section: Widget 3
+      - section: Future Considerations & Conclusion
         anchorurl: widget3
