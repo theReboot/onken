@@ -98,8 +98,7 @@ main {
 
 .content {
 
-  & > *:not(section),
-  section > * {
+  & > * {
     margin-left: 33%;
 
     @include breakpoint(mobile) {
@@ -179,6 +178,11 @@ h2 {
     color: $green;
     border-color: $grey;
   }
+
+  .bg--green & {
+    color: $white;
+    border-color: $white;
+  }
 }
 
 h3 {
@@ -208,9 +212,11 @@ ul {
 
 blockquote p {
   color: $yellow;
+  font-family: $serif;
   font-size: 2.3rem;
   font-style: italic;
   font-weight: 700;
+  line-height: 1.3;
   margin: 2rem 0 2.5rem;
 }
 
@@ -321,7 +327,7 @@ nav {
 }
 
 // added extra classes for specificity
-.content .toc.toc {
+.toc.toc {
   color: white;
   float: left;
   margin: 2rem 0 0 0;
@@ -393,6 +399,11 @@ nav {
 .bg--white {
   background: $white;
   color: $black;
+}
+
+.bg--green {
+  background: $green;
+  color: $white;
 }
 
 // footer

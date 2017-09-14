@@ -4,7 +4,7 @@ title: Opportunities/Recommendations
 permalink: /opportunities-recommendations/
 ---
 
-<section class="introduction wrapper">
+<section class="introduction wrapper content">
 {% capture introduction %}{% include /content/3.0_introduction.md %}{% endcapture %}
   {{ introduction | markdownify }}
 {% include graphic-matrix.html %}
