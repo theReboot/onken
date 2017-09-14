@@ -183,6 +183,11 @@ h2 {
     color: $white;
     border-color: $white;
   }
+
+  .bg--lightGrey & {
+    color: $black;
+    border-color: $black;
+  }
 }
 
 h3 {
@@ -408,6 +413,11 @@ nav {
 .bg--green {
   background: $green;
   color: $white;
+}
+
+.bg--lightGrey {
+  background: $lightGrey;
+  color: $black;
 }
 
 // footer

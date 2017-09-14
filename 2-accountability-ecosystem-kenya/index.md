@@ -20,7 +20,7 @@ permalink: /accountability-ecosystem-kenya/
       {{ incentives | markdownify }}
     </div>
   </div>
-  <div class="bg--green">
+  <div class="bg--lightGrey">
     <div class="wrapper content">
     {% capture copingStrategies %}{% include /content/2.1.2_copingStrategies.md %}{% endcapture %}
       {{ copingStrategies | markdownify }}
@@ -39,7 +39,7 @@ permalink: /accountability-ecosystem-kenya/
       {{ incentives | markdownify }}
     </div>
   </div>
-  <div class="bg--green">
+  <div class="bg--lightGrey">
     <div class="wrapper content">
     {% capture copingStrategies %}{% include /content/2.2.2_copingStrategies.md %}{% endcapture %}
       {{ copingStrategies | markdownify }}
@@ -58,7 +58,7 @@ permalink: /accountability-ecosystem-kenya/
       {{ incentives | markdownify }}
     </div>
   </div>
-  <div class="bg--green">
+  <div class="bg--lightGrey">
     <div class="wrapper content">
     {% capture copingStrategies %}{% include /content/2.3.2_copingStrategies.md %}{% endcapture %}
       {{ copingStrategies | markdownify }}
@@ -77,7 +77,7 @@ permalink: /accountability-ecosystem-kenya/
       {{ incentives | markdownify }}
     </div>
   </div>
-  <div class="bg--green">
+  <div class="bg--lightGrey">
     <div class="wrapper content">
     {% capture copingStrategies %}{% include /content/2.4.2_copingStrategies.md %}{% endcapture %}
       {{ copingStrategies | markdownify }}
@@ -89,7 +89,7 @@ permalink: /accountability-ecosystem-kenya/
       {{ incentives | markdownify }}
     </div>
   </div>
-  <div class="bg--green">
+  <div class="bg--lightGrey">
     <div class="wrapper content">
     {% capture copingStrategies %}{% include /content/2.4.4_copingStrategies.md %}{% endcapture %}
       {{ copingStrategies | markdownify }}

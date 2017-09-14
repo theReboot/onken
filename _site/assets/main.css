@@ -178,6 +178,7 @@ h1 { font-size: 2.8rem; font-weight: 700; line-height: 1; }
 h2 { border-bottom: 1px solid #f7f7f7; color: #ecef86; font-size: 2.5rem; font-weight: 500; line-height: 1; padding: 0 0 1rem 0; }
 .bg--white h2 { color: #7bba87; border-color: #9f9fa5; }
 .bg--green h2 { color: #f7f7f7; border-color: #f7f7f7; }
+.bg--lightGrey h2 { color: #313131; border-color: #313131; }
 
 h3 { color: #7bba87; font-size: 2rem; }
 .bg--green h3 { color: #f7f7f7; }
@@ -229,6 +230,8 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .bg--white { background: #f7f7f7; color: #313131; }
 
 .bg--green { background: #7bba87; color: #f7f7f7; }
+
+.bg--lightGrey { background: #E8E8E8; color: #313131; }
 
 .footer { background: #E8E8E8; min-height: 12rem; margin: 5rem 0 0 0; padding: 4rem 0 6rem; }
 
