@@ -188,6 +188,10 @@ h2 {
 h3 {
   color: $green;
   font-size: 2rem;
+
+  .bg--green & {
+    color: $white;
+  }
 }
 
 h4 {

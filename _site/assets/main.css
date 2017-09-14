@@ -180,6 +180,7 @@ h2 { border-bottom: 1px solid #f7f7f7; color: #ecef86; font-size: 2.5rem; font-w
 .bg--green h2 { color: #f7f7f7; border-color: #f7f7f7; }
 
 h3 { color: #7bba87; font-size: 2rem; }
+.bg--green h3 { color: #f7f7f7; }
 
 h4 { font-size: 1.5rem; opacity: .6; }
 
