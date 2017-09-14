@@ -18,6 +18,10 @@ body {
   font-family: $serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -167,7 +171,6 @@ h1 {
 }
 
 h2 {
-  border-bottom: 1px solid $white;
   color: $yellow;
   font-size: 2.5rem;
   font-weight: 500;
@@ -227,6 +230,35 @@ blockquote p {
   font-weight: 700;
   line-height: 1.3;
   margin: 2rem 0 2.5rem;
+}
+
+// This is for the H2 tags on the part 2 page, with white blocks
+.block {
+  background: $white;
+  color: $darkBlue;
+  margin-top: 0;
+  padding: 1.5rem 2rem;
+
+  .preTitle {
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 5px;
+    opacity: .5;
+    text-transform: uppercase;
+
+    @include breakpoint('mobile') {
+      font-size: 1.3rem;
+    }
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    @include breakpoint('mobile') {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 // typography for the flyOut box
@@ -559,6 +591,15 @@ nav {
 }
 
 // graphic styles
+
+// styles for illustrations in pt. 2
+.profile {
+  position: sticky;
+
+  .government & {
+    width: 35rem;
+  }
+}
 
 .ai2html {
   font-family: $sansSerif;
