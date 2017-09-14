@@ -268,7 +268,8 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 
 .ai2html { font-family: "franklin-gothic-urw", sans-serif; }
 
-.g-flyOutButton { cursor: pointer; }
+.g-flyOutButton { cursor: pointer; -webkit-transition: .2s all ease; transition: .2s all ease; }
+.g-flyOutButton:hover { text-decoration: underline; }
 
 @media (max-width: 768px) { .g-ON_matrix-desktop { display: none; } }
 @media (max-width: 600px) { .g-ON_matrix-desktop { display: none; } }

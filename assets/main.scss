@@ -572,6 +572,12 @@ nav {
 // recommendation text
 .g-flyOutButton {
   cursor: pointer;
+  transition: .2s all ease;
+
+  // underline when hovering over matrix item, to encourage clicking the text, not the dot
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // this shows/hides the corresponding artboard markup
