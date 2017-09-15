@@ -69,6 +69,7 @@ permalink: /accountability-ecosystem-kenya/
 
 <section id="media" class="media">
   <div class="wrapper content">
+    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media.svg" alt="Illustration of media actors in Kenya"/>
     {% capture media %}{% include /content/2.4_media.md %}{% endcapture %}
       {{ media | markdownify }}
   </div>
