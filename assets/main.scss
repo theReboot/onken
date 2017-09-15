@@ -594,7 +594,15 @@ nav {
 
 // styles for illustrations in pt. 2
 .profile {
-  position: sticky;
+  display: block;
+
+  // this is because profile images have a margin left of 33%
+  width: 66%;
+
+  @include breakpoint('mobile') {
+    // when on mobile should span full width
+    width: 100%;
+  }
 
   .government & {
     max-width: 47rem;
@@ -623,7 +631,7 @@ nav {
 
 // this shows/hides the corresponding artboard markup
 
-.g-ON_matrix-desktop {
+.g-desktop {
   @include breakpoint('tablet') {
     display: none;
   }
@@ -632,7 +640,7 @@ nav {
   }
 }
 
-.g-ON_matrix-tablet {
+.g-tablet {
   @include breakpoint('desktop') {
     display: none;
   }
@@ -641,7 +649,7 @@ nav {
   }
 }
 
-.g-ON_matrix-mobile {
+.g-mobile {
   @include breakpoint('desktop') {
     display: none;
   }
