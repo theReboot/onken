@@ -5,4 +5,12 @@
 layout: home
 ---
 
-There is some great and powerful content here on the homepage. But it hasn't arrived yet.
+<div class="homepageTitle">
+  <h1>Big Title of the Report</h1>
+  <span class="subheading">And here is a longer subheading. Very descriptive.</span>
+  <div class="button"><a href="{{ site.baseurl }}/why-fund-kenyan-media/">Read the Report</a></div>
+</div>
+
+<img class="homepageImg" src="{{ site.baseurl }}/assets/img/ecosystem.png" />
+
+<div class="clearfix"></div>

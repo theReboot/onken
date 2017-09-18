@@ -327,6 +327,37 @@ blockquote p {
   }
 }
 
+.homepageTitle {
+
+  h1 {
+    color: $white;
+    font-family: $serif;
+    font-size: 5rem;
+    line-height: 1;
+    margin: 3rem 0 1rem 0;
+    max-width: 25rem;
+  }
+
+  .subheading {
+    color: $white;
+    display: block;
+    font-family: $sansSerif;
+    font-size: 3rem;
+    font-style: normal;
+    line-height: 1;
+    margin: 0 0 2rem 0;
+    opacity: .4;
+    max-width: 45rem;
+  }
+}
+
+.homepageImg {
+  float: right;
+  margin-top: -5rem;
+  width: 100%;
+  max-width: 46em;
+}
+
 // typography for the flyOut box
 // doubled up so it doesn't compete with ai2html graphic specificity
 .flyOut__inner__text.flyOut__inner__text {
@@ -525,7 +556,7 @@ nav {
 .footer {
   background: $lightGrey;
   min-height: 12rem;
-  margin: 5rem 0 0 0;
+  margin: 0;
   padding: 4rem 0 6rem;
 }
 
@@ -586,8 +617,16 @@ nav {
 .button {
   border: 2px solid $white;
   cursor: pointer;
+  display: inline-block;
   font-size: 2rem;
   padding: 1.5rem;
+
+  a:link,
+  a:active,
+  a:visited {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 // fly out feature sidebar
