@@ -289,6 +289,15 @@ blockquote p {
   margin: 2rem 0 2.5rem;
 }
 
+.subheading {
+  color: $black;
+  font-family: $serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 // This is for the H2 tags on the part 2 page, with white blocks
 .block {
   background: $white;
@@ -461,6 +470,7 @@ nav {
   // doubled-up for specificity
   .nav-active.nav-active {
     color: $green;
+    font-weight: 700;
   }
 }
 

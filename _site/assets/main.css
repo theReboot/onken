@@ -204,6 +204,8 @@ ul { line-height: 1.5; }
 
 blockquote p { color: #ecef86; font-family: "freight-text-pro", serif; font-size: 2.3rem; font-style: italic; font-weight: 700; line-height: 1.3; margin: 2rem 0 2.5rem; }
 
+.subheading { color: #313131; font-family: "freight-text-pro", serif; font-size: 1.8rem; font-style: italic; font-weight: 700; line-height: 1.3; }
+
 .block { background: #f7f7f7; color: #2e2f3a; margin-top: 0; padding: 1.5rem 2rem; }
 .block .preTitle { display: block; font-size: 1.6rem; letter-spacing: 5px; opacity: .5; text-transform: uppercase; }
 @media (max-width: 600px) { .block .preTitle { font-size: 1.3rem; } }
@@ -234,7 +236,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .toc.toc a { text-decoration: none; -webkit-transition: .4s all ease; transition: .4s all ease; }
 .toc.toc a:link, .toc.toc a:visited, .toc.toc a:active { color: #9f9fa5; }
 .toc.toc a:hover { color: #9f9fa5; opacity: .8; }
-.toc.toc .nav-active.nav-active { color: #7bba87; }
+.toc.toc .nav-active.nav-active { color: #7bba87; font-weight: 700; }
 
 .toc ul { color: #9f9fa5; font-family: "freight-text-pro", serif; font-size: 1.2rem; }
 
