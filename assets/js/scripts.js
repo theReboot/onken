@@ -105,10 +105,6 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop){
 
-      console.log("scroll top: " + st);
-      console.log("window height: " + $(window).height());
-      console.log("document height: " + $(document).height());
-      console.log("scroll + window = " + ($(window).height()+st));
       // Scrolling Down
       // if we're above the fold
       if (st > headerHeight ) {
@@ -122,7 +118,7 @@ function hasScrolled() {
       if (st < headerHeight) {
         $('.header').removeClass('header--down header--up header--onlyNav');
       } else if ($(window).height() > st > headerHeight) {
-        console.log("bug!")
+        
       }
       // scrolling up below the nav bar
       else {
