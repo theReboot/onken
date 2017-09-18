@@ -52,7 +52,7 @@ img {
   top: 0;
   padding: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 5;
 
   @include breakpoint('mobile') {
     height: auto;
@@ -133,10 +133,67 @@ figure {
 .fullWidth.fullWidth {
   margin-left: 0;
   position: relative;
+  width: 100%;
 }
 
 .no-scroll {
   overflow: hidden;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.arrowWrap {
+  display: inline-block;
+  vertical-align: middle;
+
+  a {
+    display: inline-block;
+    border-radius: 50%;
+  }
+
+  .left {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border: 0.5rem solid $yellow;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+
+  .left:after {
+    content: '';
+  	display: inline-block;
+    margin-top: .8rem;
+    margin-left: .9rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-top: 0.5rem solid $yellow;
+    border-right: 0.5rem solid $yellow;
+    transform: rotate(-135deg);
+  }
+
+  .right {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border: 0.5em solid $yellow;
+    border-radius: 50%;
+    margin-left: 1.5rem;
+  }
+
+  .right:after {
+    content: '';
+  	display: inline-block;
+    margin-top: .8rem;
+    margin-left: .6rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-top: 0.5rem solid $yellow;
+    border-right: 0.5rem solid $yellow;
+    transform: rotate(45deg);
+  }
 }
 
 // typography
@@ -669,7 +726,7 @@ nav {
   color: $black;
   display: flex;
   height: $timelineHeight;
-  margin: 50px 5%;
+  margin: 3rem 5% 1rem;
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -723,8 +780,10 @@ nav {
   width: 100%;
 }
 
+
+// this is used to determine when a section is active
 .timelineWindow {
-  width: 50%;
+  width: 70%;
   height: $timelineHeight;
   // background: blue;
   z-index: 0;
@@ -775,7 +834,7 @@ nav {
   position: absolute;
   text-align: center;
   width: 100%;
-  z-index: 6;
+  z-index: 2;
 }
 
 .timeline__section__introduction {
@@ -784,7 +843,7 @@ nav {
   top: 0;
   transform: translateY(50%);
   white-space: normal;
-  z-index: 8;
+  z-index: 2;
 
   p {
     font-size: 2rem;
@@ -801,7 +860,7 @@ nav {
   position: absolute;
   top: 25rem;
   white-space: normal;
-  z-index: 6;
+  z-index: 2;
 
   @include breakpoint('mobile') {
     top: 19rem;
@@ -838,7 +897,7 @@ nav {
   top: 0;
   transition: 1s all ease;
   white-space: normal;
-  z-index: 8;
+  z-index: 2;
 
   .active & {
     opacity: 1;
@@ -854,4 +913,12 @@ nav {
       font-size: .8rem;
     }
   }
+}
+
+.timelineButtonLeft {
+  float: left;
+}
+
+.timelineButtonRight {
+  float: right;
 }
