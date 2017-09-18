@@ -356,6 +356,10 @@ blockquote p {
   margin-top: -5rem;
   width: 100%;
   max-width: 46em;
+
+  @include breakpoint('mobile') {
+    margin-top: 2rem;
+  }
 }
 
 // typography for the flyOut box
