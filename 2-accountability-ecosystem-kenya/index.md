@@ -31,6 +31,7 @@ permalink: /accountability-ecosystem-kenya/
 
 <section id="citizens" class="citizens">
   <div class="wrapper content">
+    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens@2x.png" alt="Illustration of citizens in Kenya"/>
     {% capture citizens %}{% include /content/2.2_citizens.md %}{% endcapture %}
       {{ citizens | markdownify }}
   </div>
