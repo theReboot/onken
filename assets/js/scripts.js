@@ -10,6 +10,12 @@
 
 $(document).ready(function(){
 
+    // if the URL comes with an ID attached
+    if (window.location.hash) {
+      // var activeID = window.location.hash.substring(1);
+      $('.flyOut__wrap').find(window.location.hash).addClass('flyOut__active');
+    }
+
     /**
      * This part causes smooth scrolling using scrollto.js
      * We target all a tags inside the nav, and apply the scrollto.js to it.
@@ -56,7 +62,6 @@ $(document).ready(function(){
 
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").addClass("nav-active");
-                console.log(theID);
                 // URL rewrites
                 window.history.replaceState({}, currentDomain, currentPath + theID);
                 return false;
@@ -78,15 +83,35 @@ $(document).ready(function(){
 
     // fly out sidebar
     $( ".flyOutButton, .flyOut__close, .g-flyOutButton").click(function() {
-      $(this).parents('.flyOut__wrap').find('.flyOut').toggleClass('flyOut__active')
-      if($(this).parents('.flyOut__wrap').find('.flyOut').hasClass('flyOut__active')) {
-        $('body').addClass('no-scroll');
-      }
-      else {
+
+      var currentPath = window.location.pathname;
+      var currentDomain = document.domain;
+      var flyOut = $(this).parents('.flyOut__wrap').find('.flyOut')
+      var flyOutID = flyOut.attr("id");
+
+      // if this flyOut window is already open
+      if (flyOut.hasClass('flyOut__active')) {
+
         $('body').removeClass('no-scroll');
+        flyOut.toggleClass('flyOut__active')
+
+        // URL rewrites
+        window.history.pushState({}, currentDomain, currentPath);
+        return false;
+
+      } else {
+
+        flyOut.toggleClass('flyOut__active')
+        $('body').addClass('no-scroll');
+        // URL rewrites
+        window.history.pushState({}, currentDomain, currentPath + '#' + flyOutID);
+        return false;
+
       }
     })
 });
+
+
 
 // Leave fly-out feature when esc key is pressed
 $(document).keyup(function(e) {
