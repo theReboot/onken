@@ -15,8 +15,15 @@ $(document).ready(function(){
      * We target all a tags inside the nav, and apply the scrollto.js to it.
      */
     $(".toc a").click(function(evn){
-        evn.preventDefault();
-        $('html,body').scrollTo(this.hash, this.hash);
+
+      var currentPath = window.location.pathname;
+      var currentDomain = document.domain;
+
+      evn.preventDefault();
+      $('html,body').scrollTo(this.hash, this.hash);
+      // URL rewrites
+      window.history.pushState({}, currentDomain, currentPath + $(this).attr("href"));
+      return false;
     });
 
     /**
@@ -26,11 +33,16 @@ $(document).ready(function(){
      */
     var aChildren = $(".toc li").children(); // find the a children of the list items
     var aArray = []; // create the empty aArray
+
     for (var i=0; i < aChildren.length; i++) {
         var aChild = aChildren[i];
         var ahref = $(aChild).attr('href');
         aArray.push(ahref);
     } // this for loop fills the aArray with attribute href values
+
+    var currentPath = window.location.pathname;
+    var currentDomain = document.domain;
+
 
     $(window).scroll(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
@@ -41,8 +53,13 @@ $(document).ready(function(){
             var theID = aArray[i];
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
+
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").addClass("nav-active");
+                console.log(theID);
+                // URL rewrites
+                window.history.replaceState({}, currentDomain, currentPath + theID);
+                return false;
             } else {
                 $("a[href='" + theID + "']").removeClass("nav-active");
             }
@@ -55,7 +72,9 @@ $(document).ready(function(){
                 $("nav li:last-child a").addClass("nav-active");
             }
         }
+
     });
+
 
     // fly out sidebar
     $( ".flyOutButton, .flyOut__close, .g-flyOutButton").click(function() {
@@ -118,7 +137,7 @@ function hasScrolled() {
       if (st < headerHeight) {
         $('.header').removeClass('header--down header--up header--onlyNav');
       } else if ($(window).height() > st > headerHeight) {
-        
+
       }
       // scrolling up below the nav bar
       else {
@@ -250,6 +269,5 @@ win.scroll(function(event) {
             return result;
         };
     }
-
 
 })();
