@@ -199,6 +199,8 @@ h4 { font-size: 1.5rem; opacity: .6; }
 h5 { font-size: 1.2rem; }
 
 p { font-family: "franklin-gothic-urw", sans-serif; font-size: 1.2rem; line-height: 1.5; margin: 0 0 1rem 0; }
+p a:link, p a:active { color: #ecef86; }
+p a:visited { color: #c6c27d; }
 
 ul { line-height: 1.5; }
 
@@ -253,10 +255,14 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 [class*='bg--'] { margin: 0 !important; padding: 3rem 0; }
 
 .bg--white { background: #f7f7f7; color: #313131; }
+.bg--white a:link, .bg--white a:active { color: #9f9fa5; }
+.bg--white a:visited { color: #2e2f3a; }
 
 .bg--green { background: #7bba87; color: #f7f7f7; }
 
 .bg--lightGrey { background: #E8E8E8; color: #313131; }
+.bg--lightGrey a:link, .bg--lightGrey a:active { color: #9f9fa5; }
+.bg--lightGrey a:visited { color: #2e2f3a; }
 
 .footer { background: #E8E8E8; min-height: 12rem; margin: 0; padding: 4rem 0 6rem; }
 

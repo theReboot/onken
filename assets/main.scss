@@ -273,6 +273,15 @@ p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin: 0 0 1rem 0;
+
+  a:link,
+  a:active {
+    color: $yellow;
+  }
+
+  a:visited {
+    color: $darkYellow;
+  }
 }
 
 ul {
@@ -543,6 +552,15 @@ nav {
 .bg--white {
   background: $white;
   color: $black;
+
+  a:link,
+  a:active {
+    color: $grey;
+  }
+
+  a:visited {
+    color: $darkBlue;
+  }
 }
 
 .bg--green {
@@ -553,6 +571,15 @@ nav {
 .bg--lightGrey {
   background: $lightGrey;
   color: $black;
+
+  a:link,
+  a:active {
+    color: $grey;
+  }
+
+  a:visited {
+    color: $darkBlue;
+  }
 }
 
 // footer
