@@ -298,6 +298,22 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 
 .flyOut__close { background: #E8E8E8; border: 2px solid #313131; cursor: pointer; display: block; padding: 1rem; position: fixed; top: 1rem; }
 
+.meter__wrap { margin-bottom: 1rem; padding-top: 1rem; position: relative; width: 100%; max-width: 400px; }
+
+.meter__label__negative { float: left; }
+
+.meter__label__positive { float: right; text-align: right; }
+
+.meter__arrow--down { border-left: 0.8rem solid transparent; border-right: 0.8rem solid transparent; border-top: 0.8rem solid black; height: 0; left: 50%; margin-bottom: .5rem; position: absolute; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 0; z-index: 2; }
+
+.meter { background: #E8E8E8; border: 1px solid #9f9fa5; border-radius: 20px; height: 20px; overflow: hidden; margin: auto; position: relative; width: 100%; }
+
+.meter__inner { bottom: 0; height: 20px; position: absolute; width: 0; }
+.meter__inner.positive { background: #7bba87; left: 50%; }
+.meter__inner.positive::after { background: #9f9fa5; content: ''; height: 20px; left: 0; position: absolute; width: 1px; z-index: 3; }
+.meter__inner.negative { background: #ecef86; left: 50%; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+.meter__inner.negative::after { background: #9f9fa5; content: ''; height: 20px; position: absolute; right: 0; width: 1px; z-index: 3; }
+
 .profile { display: block; width: 66%; }
 @media (max-width: 600px) { .profile { width: 100%; } }
 .government .profile { max-width: 47rem; }

@@ -1,0 +1,8 @@
+<div class="meter__wrap">
+  <div class="meter__arrow--down {{ include.effect }}" style="margin-left: calc({% if include.effect == 'negative' %}-{% endif %}{{ include.amount }}% / 2);"></div>
+  <div class="meter__label__negative">–</div>
+  <div class="meter__label__positive">+</div>
+  <div class="meter">
+    <div class="meter__inner {{ include.effect }}" style="width: calc({{ include.amount }}% / 2);"></div>
+  </div>
+</div>

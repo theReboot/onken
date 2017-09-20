@@ -727,6 +727,96 @@ nav {
   top: 1rem;
 }
 
+// meter/slider styles
+
+.meter__wrap {
+  margin-bottom: 1rem;
+  padding-top: $arrowHeight;
+  position: relative;
+  width: 100%;
+  max-width: $meterWidth;
+}
+
+.meter__label__negative {
+  float: left;
+}
+
+.meter__label__positive {
+  float: right;
+  text-align: right;
+}
+
+.meter__arrow--down {
+  border-left: $arrowSize solid transparent;
+  border-right: $arrowSize solid transparent;
+  border-top: $arrowSize solid black;
+  height: 0;
+  left: 50%;
+  margin-bottom: .5rem;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 0;
+  z-index: 2;
+
+  &.positive {
+    // margin-left: calc(#{$score}% / 2);
+  }
+
+  &.negative {
+    // margin-left:calc(-#{$score}% / 2);
+  }
+}
+.meter {
+  background: $lightGrey;
+  border: 1px solid $grey;
+  border-radius: 20px;
+  height: 20px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+
+.meter__inner {
+  bottom: 0;
+  height: $meterHeight;
+  position: absolute;
+  width: 0;
+
+  &.positive {
+    background: $green;
+    left: 50%;
+    // width: calc(#{$score}% / 2);
+
+    &::after {
+      background: $grey;
+      content: '';
+      height: $meterHeight;
+      left: 0;
+      position: absolute;
+      width: 1px;
+      z-index: 3;
+    }
+  }
+
+  &.negative {
+    background: $yellow;
+    left: 50%;
+    // width: calc(#{$score}% / 2);
+    transform: translateX(-100%);
+
+    &::after {
+      background: $grey;
+      content: '';
+      height: $meterHeight;
+      position: absolute;
+      right: 0;
+      width: 1px;
+      z-index: 3;
+    }
+  }
+}
+
 // graphic styles
 
 // styles for illustrations in pt. 2
