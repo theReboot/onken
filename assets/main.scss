@@ -652,6 +652,10 @@ nav {
   font-size: 2rem;
   padding: 1.5rem;
 
+  .bg--lightGrey & {
+    border-color: $black;
+  }
+
   a:link,
   a:active,
   a:visited {
