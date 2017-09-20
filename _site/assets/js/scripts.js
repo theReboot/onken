@@ -15,7 +15,19 @@ function closeFlyOut() {
   $('body').removeClass('no-scroll');
 }
 
+function hashRewrite(path) {
+  // console.log(path);
+  var currentPath = window.location.pathname;
+  var currentDomain = document.domain;
 
+  if (path === undefined || path === null) {
+    window.history.replaceState({}, currentDomain, currentPath);
+    return false;
+  } else {
+    window.history.replaceState({}, currentDomain, currentPath + path);
+    return false;
+  }
+}
 
 $(document).ready(function(){
 
@@ -72,8 +84,8 @@ $(document).ready(function(){
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").addClass("nav-active");
                 // URL rewrites
-                window.history.replaceState({}, currentDomain, currentPath + theID);
-                return false;
+                hashRewrite(theID)
+
             } else {
                 $("a[href='" + theID + "']").removeClass("nav-active");
             }
@@ -93,28 +105,25 @@ $(document).ready(function(){
     // fly out sidebar
     $( ".flyOutButton, .flyOut__close, .g-flyOutButton").click(function() {
 
-      var currentPath = window.location.pathname;
-      var currentDomain = document.domain;
       var flyOut = $(this).parents('.flyOut__wrap').find('.flyOut')
       var flyOutID = flyOut.attr("id");
 
       // if this flyOut window is already open
       if (flyOut.hasClass('flyOut__active')) {
 
-        $('body').removeClass('no-scroll');
-        flyOut.toggleClass('flyOut__active')
+        closeFlyOut();
 
         // URL rewrites
-        window.history.pushState({}, currentDomain, currentPath);
-        return false;
+        hashRewrite()
 
       } else {
 
         flyOut.toggleClass('flyOut__active')
         $('body').addClass('no-scroll');
         // URL rewrites
-        window.history.pushState({}, currentDomain, currentPath + '#' + flyOutID);
-        return false;
+        hashRewrite('#' + flyOutID)
+        // window.history.pushState({}, currentDomain, currentPath + '#' + flyOutID);
+        // return false;
 
       }
     })
@@ -122,13 +131,15 @@ $(document).ready(function(){
 
 // Close fly-out when you click in the dark part
 $('.flyOut__bg').click( function() {
-  closeFlyOut()
+  closeFlyOut();
+  hashRewrite();
 });
 
 // Close fly-out feature when esc key is pressed
 $(document).keyup(function(e) {
   if (e.keyCode === 27) {
     closeFlyOut();
+    hashRewrite();
   }
 });
 
