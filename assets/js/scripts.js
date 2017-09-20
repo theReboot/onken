@@ -8,6 +8,15 @@
 
 //////
 
+// global functions
+
+function closeFlyOut() {
+  $('.flyOut').removeClass('flyOut__active');
+  $('body').removeClass('no-scroll');
+}
+
+
+
 $(document).ready(function(){
 
     // if the URL comes with an ID attached
@@ -111,13 +120,15 @@ $(document).ready(function(){
     })
 });
 
+// Close fly-out when you click in the dark part
+$('.flyOut__bg').click( function() {
+  closeFlyOut()
+});
 
-
-// Leave fly-out feature when esc key is pressed
+// Close fly-out feature when esc key is pressed
 $(document).keyup(function(e) {
   if (e.keyCode === 27) {
-    $('.flyOut').removeClass('flyOut__active');
-    $('body').removeClass('no-scroll');
+    closeFlyOut();
   }
 });
 
