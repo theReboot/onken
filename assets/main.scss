@@ -730,11 +730,24 @@ nav {
 // meter/slider styles
 
 .meter__wrap {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   padding-top: $arrowHeight;
   position: relative;
   width: 100%;
   max-width: $meterWidth;
+
+  &::after {
+    content: 'Outcome of this strategy';
+    display: block;
+    font-family: $sansSerif;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin: .5rem 0 0 0;
+    opacity: .4;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 .meter__label__negative {
@@ -767,7 +780,6 @@ nav {
   }
 }
 .meter {
-  background: $lightGrey;
   border: 1px solid $grey;
   border-radius: 20px;
   height: 20px;
