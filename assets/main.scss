@@ -27,6 +27,11 @@ img {
   width: 100%;
   max-width: $maxWidth;
   padding: 0 $wrapperPad;
+
+  @include breakpoint('mobile') {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .header {

@@ -143,6 +143,7 @@ body { background: #2e2f3a; color: #f7f7f7; font-family: "freight-text-pro", ser
 img { max-width: 100%; }
 
 .wrapper { margin: 0 auto; width: 100%; max-width: 1200px; padding: 0 2.5rem; }
+@media (max-width: 600px) { .wrapper { padding-left: 1rem; padding-right: 1rem; } }
 
 .header { background: #E8E8E8; border-bottom: 0.8rem solid #7bba87; padding: 1.5rem 0; overflow: hidden; -webkit-transition: height .5s ease; transition: height .5s ease; }
 
