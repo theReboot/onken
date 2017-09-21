@@ -307,7 +307,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .flyOut__close::after { content: 'X'; font-size: 1.5rem; font-weight: 700; left: 50%; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 .meter__wrap { font-size: 1.5rem; margin-bottom: 1rem; padding-top: 1rem; position: relative; width: 100%; max-width: 400px; }
-.meter__wrap::after { content: 'Outcome of this strategy'; display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: .8rem; letter-spacing: 2px; margin: .5rem 0 0 0; opacity: .4; text-align: center; text-transform: uppercase; }
+.meter__wrap::after { content: 'Influence on media'; display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: .8rem; letter-spacing: 2px; margin: .5rem 0 0 0; opacity: .4; text-align: center; text-transform: uppercase; }
 
 .meter__label__negative { float: left; }
 
@@ -317,11 +317,16 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 
 .meter { border: 1px solid #9f9fa5; border-radius: 20px; height: 20px; overflow: hidden; margin: auto; position: relative; width: 100%; }
 
+.tick__wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; height: 20px; position: absolute; width: 100%; z-index: 2; }
+
+.tick { mix-blend-mode: multiply; border-left: 1px solid #9f9fa5; display: block; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; height: 20px; top: 0; }
+.tick:first-child { border: 0; }
+
 .meter__inner { bottom: 0; height: 20px; position: absolute; width: 0; }
 .meter__inner.positive { background: #7bba87; left: 50%; }
-.meter__inner.positive::after { background: #9f9fa5; content: ''; height: 20px; left: 0; position: absolute; width: 1px; z-index: 3; }
+.meter__inner.positive::after { background: #313131; content: ''; height: 20px; left: 0; position: absolute; width: 1px; z-index: 3; }
 .meter__inner.negative { background: #ecef86; left: 50%; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
-.meter__inner.negative::after { background: #9f9fa5; content: ''; height: 20px; position: absolute; right: 0; width: 1px; z-index: 3; }
+.meter__inner.negative::after { background: #313131; content: ''; height: 20px; position: absolute; right: 0; width: 1px; z-index: 3; }
 
 .profile { display: block; width: 66%; }
 @media (max-width: 600px) { .profile { width: 100%; } }
