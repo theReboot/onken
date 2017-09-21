@@ -10,6 +10,4 @@ permalink: /opportunities-recommendations/
 <div class="fullWidth">
   {% include graphic-matrix.html %}
 </div>
-{% capture content %}{% include /content/3.1_content.md %}{% endcapture %}
-  {{ content | markdownify }}
 </section>

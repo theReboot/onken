@@ -1,5 +1,6 @@
 <aside class="flyOut__wrap">
   <div class="button flyOutButton">
+    {% if include.type != '' %}<span class="button__type">{{ include.type }}</span>{% endif %}
     <span class="button__title">{{ include.title }}</span>
   </div>
   <article class="flyOut" id="{{ include.id }}">
