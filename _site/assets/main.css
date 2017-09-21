@@ -313,7 +313,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .flyOut__close { background: #E8E8E8; border: 2px solid #313131; cursor: pointer; display: block; font-family: "franklin-gothic-urw", sans-serif; padding: .6rem .7rem .5rem; position: fixed; top: 1rem; }
 .flyOut__close svg { width: 1rem; height: 1rem; }
 
-.meter__wrap { font-size: 1.5rem; margin: -.3rem 0 1rem; padding-top: 1rem; position: relative; width: 50%; max-width: 400px; }
+.meter__wrap { font-size: 1.5rem; margin: -.3rem 0 1rem; padding-top: 1rem; position: relative; width: 50%; }
 @media (max-width: 600px) { .meter__wrap { margin-top: 0; width: 100%; } }
 .meter__wrap::after { content: 'Effect of coping strategy'; display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: .8rem; letter-spacing: 2px; margin: .5rem 0 0 0; opacity: .4; text-align: center; text-transform: uppercase; }
 

@@ -812,7 +812,6 @@ nav {
   padding-top: $arrowHeight;
   position: relative;
   width: 50%;
-  max-width: $meterWidth;
 
   @include breakpoint('mobile') {
     margin-top: 0;
