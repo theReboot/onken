@@ -182,6 +182,12 @@ figure > img { width: 100%; }
 .arrowWrap .right { display: inline-block; width: 4rem; height: 4rem; border: 0.5em solid #ecef86; border-radius: 50%; margin-left: 1.5rem; }
 .arrowWrap .right:after { content: ''; display: inline-block; margin-top: .8rem; margin-left: .6rem; width: 1.4rem; height: 1.4rem; border-top: 0.5rem solid #ecef86; border-right: 0.5rem solid #ecef86; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
+.flexColumns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+@media (max-width: 600px) { .flexColumns { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
+
+.col-1-2 { width: 50%; }
+@media (max-width: 600px) { .col-1-2 { width: 100%; } }
+
 .wf-loading a, .wf-loading span, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading p { visibility: hidden; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "franklin-gothic-urw", sans-serif; }
@@ -307,7 +313,8 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .flyOut__close { background: #E8E8E8; border: 2px solid #313131; cursor: pointer; display: block; font-family: "franklin-gothic-urw", sans-serif; padding: .6rem .7rem .5rem; position: fixed; top: 1rem; }
 .flyOut__close svg { width: 1rem; height: 1rem; }
 
-.meter__wrap { font-size: 1.5rem; margin-bottom: 2rem; margin-top: -2rem; padding-top: 1rem; position: relative; width: 100%; max-width: 400px; }
+.meter__wrap { font-size: 1.5rem; margin: -.3rem 0 1rem; padding-top: 1rem; position: relative; width: 50%; max-width: 400px; }
+@media (max-width: 600px) { .meter__wrap { margin-top: 0; width: 100%; } }
 .meter__wrap::after { content: 'Effect of coping strategy'; display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: .8rem; letter-spacing: 2px; margin: .5rem 0 0 0; opacity: .4; text-align: center; text-transform: uppercase; }
 
 .meter__label__negative { float: left; }

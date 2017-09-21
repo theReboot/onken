@@ -205,6 +205,23 @@ figure {
   }
 }
 
+.flexColumns {
+  display: flex;
+  flex-direction: row;
+
+  @include breakpoint('mobile') {
+    flex-direction: column;
+  }
+}
+
+.col-1-2 {
+  width: 50%;
+
+  @include breakpoint('mobile') {
+    width: 100%;
+  }
+}
+
 // typography
 
 // typekit font event:
@@ -791,12 +808,16 @@ nav {
 
 .meter__wrap {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
-  margin-top: -2rem; // this is to pull it closer to the h4 tags above it
+  margin: -.3rem 0 1rem;
   padding-top: $arrowHeight;
   position: relative;
-  width: 100%;
+  width: 50%;
   max-width: $meterWidth;
+
+  @include breakpoint('mobile') {
+    margin-top: 0;
+    width: 100%;
+  }
 
   &::after {
     content: 'Effect of coping strategy';
