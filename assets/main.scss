@@ -772,19 +772,15 @@ nav {
   cursor: pointer;
   display: block;
   font-family: $sansSerif;
-  padding: 1.5rem;
+  padding: .6rem .7rem .5rem;
   position: fixed;
   top: 1rem;
 
-  &::after {
-    content: 'X';
-    font-size: 1.5rem;
-    font-weight: 700;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  svg {
+    width: 2rem;
+    height: 2rem;
   }
+
 }
 
 // meter/slider styles
@@ -990,7 +986,6 @@ nav {
   background: $lightGrey;
   color: $black;
   display: flex;
-  height: $timelineHeight;
   margin: 3rem 5% 1rem;
   position: relative;
   width: 100%;
@@ -1141,6 +1136,21 @@ nav {
   }
 }
 
+// pre titles before the implication and event sections
+
+.timeline__section__event__title::before,
+.timeline__section__implication::before {
+  color: $black;
+  display: block;
+  font-family: $sansSerif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: .3rem;
+  opacity: .5;
+  text-transform: uppercase;
+}
+
 .timeline__section__event__title {
   display: block;
   font-size: 1.2rem;
@@ -1150,6 +1160,10 @@ nav {
   @include breakpoint('mobile') {
     font-size: 1rem;
     margin-bottom: .3rem;
+  }
+
+  &::before {
+    content: 'Event';
   }
 }
 
@@ -1164,13 +1178,18 @@ nav {
   white-space: normal;
   z-index: 2;
 
+  &::before {
+    content: 'Implication';
+  }
+
   .active & {
     opacity: 1;
     // background: red;
   }
 
   p, li {
-    font-size: 1.1rem;
+    font-family: $sansSerif;
+    font-size: 1rem;
     line-height: 1.3;
     margin-bottom: .8rem;
 

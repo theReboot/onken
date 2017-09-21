@@ -303,8 +303,8 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .flyOut__inner__text { padding: 3.5rem 1.5rem; }
 .flyOut__active .flyOut__inner__text { left: 0; }
 
-.flyOut__close { background: #E8E8E8; border: 2px solid #313131; cursor: pointer; display: block; font-family: "franklin-gothic-urw", sans-serif; padding: 1.5rem; position: fixed; top: 1rem; }
-.flyOut__close::after { content: 'X'; font-size: 1.5rem; font-weight: 700; left: 50%; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.flyOut__close { background: #E8E8E8; border: 2px solid #313131; cursor: pointer; display: block; font-family: "franklin-gothic-urw", sans-serif; padding: .6rem .7rem .5rem; position: fixed; top: 1rem; }
+.flyOut__close svg { width: 2rem; height: 2rem; }
 
 .meter__wrap { font-size: 1.5rem; margin-bottom: 1rem; padding-top: 1rem; position: relative; width: 100%; max-width: 400px; }
 .meter__wrap::after { content: 'Influence on media'; display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: .8rem; letter-spacing: 2px; margin: .5rem 0 0 0; opacity: .4; text-align: center; text-transform: uppercase; }
@@ -347,7 +347,7 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 @media (max-width: 768px) { .g-mobile { display: none; } }
 @media (max-width: 600px) { .g-mobile { display: block; } }
 
-.timeline { -webkit-box-align: top; -ms-flex-align: top; align-items: top; background: #E8E8E8; color: #313131; display: -webkit-box; display: -ms-flexbox; display: flex; height: 600px; margin: 3rem 5% 1rem; position: relative; width: 100%; max-width: 1200px; }
+.timeline { -webkit-box-align: top; -ms-flex-align: top; align-items: top; background: #E8E8E8; color: #313131; display: -webkit-box; display: -ms-flexbox; display: flex; margin: 3rem 5% 1rem; position: relative; width: 100%; max-width: 1200px; }
 @media (max-width: 600px) { .timeline { height: 480px; } }
 
 .top { position: absolute; top: 0; }
@@ -382,12 +382,16 @@ nav { font-family: "franklin-gothic-urw", sans-serif; }
 .timeline__section__event p { font-family: "freight-text-pro", serif; font-size: 1rem; }
 @media (max-width: 600px) { .timeline__section__event p { font-size: .8rem; } }
 
+.timeline__section__event__title::before, .timeline__section__implication::before { color: #313131; display: block; font-family: "franklin-gothic-urw", sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: 2px; margin-bottom: .3rem; opacity: .5; text-transform: uppercase; }
+
 .timeline__section__event__title { display: block; font-size: 1.2rem; font-weight: 700; margin-bottom: .5rem; }
 @media (max-width: 600px) { .timeline__section__event__title { font-size: 1rem; margin-bottom: .3rem; } }
+.timeline__section__event__title::before { content: 'Event'; }
 
 .timeline__section__implication { border-bottom: 1px solid #313131; margin: 15px; opacity: 0; padding-bottom: .5rem; position: absolute; top: 0; -webkit-transition: 1s all ease; transition: 1s all ease; white-space: normal; z-index: 2; }
+.timeline__section__implication::before { content: 'Implication'; }
 .active .timeline__section__implication { opacity: 1; }
-.timeline__section__implication p, .timeline__section__implication li { font-size: 1.1rem; line-height: 1.3; margin-bottom: .8rem; }
+.timeline__section__implication p, .timeline__section__implication li { font-family: "franklin-gothic-urw", sans-serif; font-size: 1rem; line-height: 1.3; margin-bottom: .8rem; }
 @media (max-width: 600px) { .timeline__section__implication p, .timeline__section__implication li { font-size: .8rem; } }
 
 .timelineButtonLeft { float: left; }
