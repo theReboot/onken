@@ -118,6 +118,10 @@ main {
 
 section {
   padding-top: 1.8rem;
+
+  &:last-of-type {
+    padding-bottom: 6rem;
+  }
 }
 
 figure {
@@ -777,8 +781,8 @@ nav {
   top: 1rem;
 
   svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
   }
 
 }
