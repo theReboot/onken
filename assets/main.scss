@@ -787,7 +787,8 @@ nav {
 
 .meter__wrap {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: -2rem; // this is to pull it closer to the h4 tags above it
   padding-top: $arrowHeight;
   position: relative;
   width: 100%;
