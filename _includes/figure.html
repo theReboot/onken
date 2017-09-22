@@ -1,0 +1,4 @@
+<figure{% if include.class != nil  %} class="{{ include.class }}"{% endif %}>
+   <img src="{{ site.baseurl }}{{ include.url }}"{% if include.alt != nil  %} alt="{{ include.alt }}"{% endif %} />
+   {% if include.caption != nil %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
