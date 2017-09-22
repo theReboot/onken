@@ -392,6 +392,11 @@ blockquote p {
   }
 }
 
+.constituent > .content:first-child {
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
 .homepageTitle {
 
   h1 {

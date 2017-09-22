@@ -1,8 +1,10 @@
+{% if include.title != nil  %}
 <aside class="flyOut__wrap">
   <div class="button flyOutButton">
-    {% if include.type != '' %}<span class="button__type">{{ include.type }}</span>{% endif %}
+    {% if include.type != nil  %}<span class="button__type">{{ include.type }}</span>{% endif %}
     <span class="button__title">{{ include.title }}</span>
   </div>
+{% endif %}
   <article class="flyOut" id="{{ include.id }}">
     <div class="flyOut__bg"></div>
     <div class="flyOut__inner">
@@ -14,4 +16,6 @@
       </div>
     </div>
   </article>
+{% if include.title != nil  %}
 </aside>
+{% endif %}

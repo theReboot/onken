@@ -1,0 +1,20 @@
+<!-- Include content as a variable -->
+{% capture internationalLearningNetwork %}{% include /content/3.2.1_internationalLearningNetwork.md %}{% endcapture %}
+<!-- markdownify the variable -->
+{% capture internationalLearningNetwork %}{{ internationalLearningNetwork | markdownify }}{% endcapture %}
+<!-- include the flyOut function and pass in the variable content -->
+{% include flyOut.html id="international-learning-network" content=internationalLearningNetwork %}
+
+<!-- Include content as a variable -->
+{% capture spacesForExperimentation %}{% include /content/3.2.2_spacesForExperimentation.md %}{% endcapture %}
+<!-- markdownify the variable -->
+{% capture spacesForExperimentation %}{{ spacesForExperimentation | markdownify }}{% endcapture %}
+<!-- include the flyOut function and pass in the variable content -->
+{% include flyOut.html id="spaces-for-experimentation" content=spacesForExperimentation %}
+
+<!-- Include content as a variable -->
+{% capture alternativePublishingPlatforms %}{% include /content/3.2.3_alternativePublishingPlatforms.md %}{% endcapture %}
+<!-- markdownify the variable -->
+{% capture alternativePublishingPlatforms %}{{ alternativePublishingPlatforms | markdownify }}{% endcapture %}
+<!-- include the flyOut function and pass in the variable content -->
+{% include flyOut.html id="alternative-publishing-platforms" content=alternativePublishingPlatforms %}

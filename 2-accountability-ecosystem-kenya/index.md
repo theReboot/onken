@@ -9,7 +9,7 @@ permalink: /accountability-ecosystem-kenya/
     {{ introduction | markdownify }}
 </section>
 
-<section id="government" class="government">
+<section id="government" class="government constituent">
   <div class="wrapper content">
   <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_government@2x.png" alt="Illustration of government actors in Kenya"/>
   {% capture government %}{% include /content/2.1_government.md %}{% endcapture %}
@@ -29,7 +29,7 @@ permalink: /accountability-ecosystem-kenya/
   </div>
 </section>
 
-<section id="citizens" class="citizens">
+<section id="citizens" class="citizens constituent">
   <div class="wrapper content">
     <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens@2x.png" alt="Illustration of citizens in Kenya"/>
     {% capture citizens %}{% include /content/2.2_citizens.md %}{% endcapture %}
@@ -49,8 +49,9 @@ permalink: /accountability-ecosystem-kenya/
   </div>
 </section>
 
-<section id="civilSociety" class="civilSociety">
+<section id="civilSociety" class="civilSociety constituent">
   <div class="wrapper content">
+    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_csos@2x.png" alt="Illustration of CSOs in Kenya"/>
     {% capture civilSociety %}{% include /content/2.3_civilSociety.md %}{% endcapture %}
       {{ civilSociety | markdownify }}
   </div>
@@ -68,7 +69,7 @@ permalink: /accountability-ecosystem-kenya/
   </div>
 </section>
 
-<section id="media" class="media">
+<section id="media" class="media constituent">
   <div class="wrapper content">
     <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media@2x.png" alt="Illustration of media actors in Kenya"/>
     {% capture media %}{% include /content/2.4_media.md %}{% endcapture %}

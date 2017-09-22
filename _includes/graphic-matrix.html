@@ -159,8 +159,16 @@
 		<div id="g-ai0-6" class="g-label g-aiAbs g-aiPointText" style="top:18.0342%;margin-top:-21.4px;left:50.2145%;margin-left:-15.08%;width:360px;">
 			<p class="g-pstyle1">Level of effort or resources</p>
 		</div>
-		<div id="g-ai0-7" class="g-flyOutButton g-aiAbs" style="top:26.3993%;left:77.4465%;width:17.6917%;">
-			<p>Alternative Publishing Platforms</p>
+		<div class="flyOut__wrap">
+			<div id="g-ai0-7" class="g-flyOutButton g-aiAbs" style="top:26.3993%;left:77.4465%;width:17.6917%;">
+				<p>Alternative Publishing Platforms</p>
+			</div>
+			<!-- Include content as a variable -->
+			{% capture alternativePublishingPlatforms %}{% include /content/3.2.3_alternativePublishingPlatforms.md %}{% endcapture %}
+			<!-- markdownify the variable -->
+			{% capture alternativePublishingPlatforms %}{{ alternativePublishingPlatforms | markdownify }}{% endcapture %}
+			<!-- include the flyOut function and pass in the variable content -->
+			{% include flyOut.html id="alternative-publishing-platforms" content=alternativePublishingPlatforms %}
 		</div>
 		<div id="g-ai0-8" class="g-flyOutButton g-aiAbs" style="top:35.0548%;left:63.6692%;width:17.1862%;">
 			<p>Solidarity Response Networks</p>
@@ -199,47 +207,7 @@
 			<div id="g-ai0-18" class="g-flyOutButton g-aiAbs" style="top:59.8961%;left:29.4063%;width:17.5232%;">
 				<p>International Learning Exchanges</p>
 			</div>
-			<article class="flyOut" id="internationalLearningExchanges">
-			  <div class="flyOut__bg"></div>
-			  <div class="flyOut__inner">
-			    <div class="flyOut__inner__text">
-						<div class="flyOut__close">
-		          <svg preserveAspectRatio="none" viewBox="0 0 52 51.88"><polygon points="51.6 6.7 45.24 0.34 26 19.57 6.76 0.34 0.4 6.7 19.64 25.94 0.4 45.17 6.76 51.54 26 32.3 45.24 51.54 51.6 45.17 32.36 25.94 51.6 6.7"/></svg>
-		        </div>
-			      <h1>1. International Learning Exchanges</h1>
-			      <div class="subheading">Fellowships or other learning experiences for Kenyan journalists to learn from international alternative media companies</div>
-			      <h3>Influence and Opportunity Description</h3>
-			      <ul>
-			        <li>Independent journalists are dependent on big media organizations to pay for and publish stories</li>
-			        <li>Use fellowship or other modality to strengthen relationship with independent kenyan journalists to create opportunities for other places to publish</li>
-			        <li>Freeing them from dependence on paid work from the big kenyan media countries</li>
-			        <li>Expose independent journalists to international standards for media to try to show alternative model than pay to play journalism</li>
-			        <li>There are already a number of fellowship  programs around the world</li>
-			      </ul>
-			      <h3>Impact</h3>
-
-			      <ul>
-			      <li><p>This could be transformative for aspiring independent journalists, to connect with larger organizations outside of Kenya</p></li>
-
-			      <li><p>It could also provide an important publisher for stories that cannot or won't be published by Kenyan media</p></li>
-
-			      <li><p>Provide political cover and credibility to independent journalists</p></li>
-
-			      <li><p>Provide access to competitive payment/reporting for independent journalists</p></li>
-
-			      <li><p>However, likely only reach a small number of people</p></li>
-			      </ul>
-
-			      <h3 id="levelofeffort">Level of Effort</h3>
-
-			      <ul>
-			      <li>There would be quite a lot of work involved with building the relationships, defining the program, and the criteria</li>
-			      </ul>
-
-			      <h3 id="otherconsiderationsrisk">Other Considerations/Risk</h3>
-			    </div>
-			  </div>
-			</article>
+			{% capture internationalLearningNetwork %}{% include /content/3.2.1_internationalLearningNetworks.md %}{% endcapture %}{% capture internationalLearningNetwork %}{{ internationalLearningNetwork | markdownify }}{% endcapture %}{% include flyOut.html id="international-learning-network" content=internationalLearningNetwork %}
 		</div>
 		<div id="g-ai0-19" class="g-flyOutButton g-aiAbs" style="top:59.9827%;left:55.9185%;width:26.8745%;">
 			<p>Media Savvy Civil Society</p>
@@ -300,8 +268,16 @@
 		<div id="g-ai1-6" class="g-label g-aiAbs g-aiPointText" style="top:19.9459%;margin-top:-13.3px;left:50.6304%;margin-left:-14.7135%;width:228px;">
 			<p class="g-pstyle1">Level of effort or resources</p>
 		</div>
-		<div id="g-ai1-7" class="g-flyOutButton g-aiAbs" style="top:28.0875%;left:77.1537%;width:17.3177%;">
-			<p>Alternative Publishing Platforms</p>
+		<div class="flyOut__wrap">
+			<div id="g-ai1-7" class="g-flyOutButton g-aiAbs" style="top:28.0875%;left:77.1537%;width:17.3177%;">
+				<p>Alternative Publishing Platforms</p>
+			</div>
+			<!-- Include content as a variable -->
+			{% capture alternativePublishingPlatforms %}{% include /content/3.2.3_alternativePublishingPlatforms.md %}{% endcapture %}
+			<!-- markdownify the variable -->
+			{% capture alternativePublishingPlatforms %}{{ alternativePublishingPlatforms | markdownify }}{% endcapture %}
+			<!-- include the flyOut function and pass in the variable content -->
+			{% include flyOut.html id="alternative-publishing-platforms" content=alternativePublishingPlatforms %}
 		</div>
 		<div id="g-ai1-8" class="g-flyOutButton g-aiAbs" style="top:36.3951%;left:63.7265%;width:16.7969%;">
 			<p>Solidarity Response Networks</p>
