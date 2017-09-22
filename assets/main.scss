@@ -561,49 +561,76 @@ nav {
 
 // added extra classes for specificity
 .toc.toc {
+  // background: $green;
   color: white;
   float: left;
-  margin: 2rem 0 0 0;
-  mix-blend-mode: difference;
-  padding: 1.8rem 1.5rem 1.8rem $wrapperPad;
+  margin-left: calc(-#{$tocWidth} + 2rem);
+  padding: 1.8rem 0 1.8rem 0;
   position: sticky;
   top: 5.8rem;
-  width: 21rem;
-  z-index: 0;
+  transition: 1s all ease;
+  width: $tocWidth;
+  z-index: 4;
+
+  &:hover {
+    margin-left: 0;
+  }
 
   @include breakpoint(mobile) {
+    float: none;
+    margin: 0 auto;
     position: static;
     width: 100%;
   }
 
+  li {
+
+    &:first-of-type {
+      border-radius: 0 1rem 0 0;
+      overflow: hidden;
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 1rem 0;
+      overflow: hidden;
+    }
+  }
+
   // TOC nav link styling
   a {
+    background: $green;
+    color: $white;
+    display: block;
+    padding: 1rem;
     text-decoration: none;
     transition: .4s all ease;
 
     &:link,
     &:visited,
     &:active {
-      color: $grey;
+      color: $white;
     }
 
     &:hover {
-      color: $grey;
+      color: $white;
       opacity: .8;
     }
   }
 
   // doubled-up for specificity
   .nav-active.nav-active {
-    color: $green;
+    background: $yellow;
+    color: $darkBlue;
     font-weight: 700;
   }
 }
 
 .toc ul {
-  color: $grey;
   font-family: $serif;
   font-size: 1.2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .toc__preTitle {
@@ -611,16 +638,20 @@ nav {
   display: block;
   font-family: $sansSerif;
   letter-spacing: 3px;
-  opacity: .4;
+  margin-right: 2rem;
+  mix-blend-mode: difference;
+  padding-left: 1rem;
   text-transform: uppercase;
+  max-width: calc(#{$tocWidth} - 2rem);
 }
 
 .toc__title {
-  border-bottom: 1px solid $grey;
   color: $grey;
   display: inline-block;
   font-size: 1.3em;
-  padding: 0 0 .6rem 0;
+  margin-right: 2rem;
+  mix-blend-mode: difference;
+  padding: 0 0 .6rem 1rem;
 }
 
 // float left style for sidebar callouts
