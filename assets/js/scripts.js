@@ -70,6 +70,12 @@ $(document).ready(function(){
     var currentPath = window.location.pathname;
     var currentDomain = document.domain;
 
+    // find position of first section in the sub nav
+    var firstSectionID = $('.toc li:first-of-type a').attr("href");
+
+    if(typeof firstSectionID !== 'undefined') {
+      var firstSectionPos = $(firstSectionID).offset().top;
+    }
 
     $(window).scroll(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
@@ -84,8 +90,7 @@ $(document).ready(function(){
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").addClass("nav-active");
                 // URL rewrites
-                hashRewrite(theID)
-
+                hashRewrite(theID);
             } else {
                 $("a[href='" + theID + "']").removeClass("nav-active");
             }
@@ -97,6 +102,10 @@ $(document).ready(function(){
                 $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
                 $("nav li:last-child a").addClass("nav-active");
             }
+        }
+
+        if(windowPos < firstSectionPos) {
+          hashRewrite();
         }
 
     });
