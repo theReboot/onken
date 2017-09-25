@@ -111,7 +111,7 @@ main {
     margin-left: 33%;
 
     @include breakpoint(mobile) {
-      margin-left: auto;
+      margin-left: 0;
     }
   }
 }
@@ -581,7 +581,9 @@ nav {
   @include breakpoint(mobile) {
     float: none;
     margin: 0 auto;
+    padding: 0;
     position: static;
+    transform: none;
     width: 100%;
   }
 
@@ -592,11 +594,19 @@ nav {
     &:first-of-type {
       border-radius: 0 1rem 0 0;
       overflow: hidden;
+
+      @include breakpoint(mobile) {
+        border-radius: 0;
+      }
     }
 
     &:last-of-type {
       border-radius: 0 0 1rem 0;
       overflow: hidden;
+
+      @include breakpoint(mobile) {
+        border-radius: 0;
+      }
     }
 
     &::after {
@@ -656,6 +666,10 @@ nav {
   padding-left: 1rem;
   text-transform: uppercase;
   max-width: calc(#{$tocWidth} - 2rem);
+
+  @include breakpoint('mobile') {
+    display: none;
+  }
 }
 
 .toc__title {
@@ -665,6 +679,10 @@ nav {
   margin-right: 2rem;
   mix-blend-mode: difference;
   padding: 0 0 .6rem 1rem;
+
+  @include breakpoint('mobile') {
+    display: none;
+  }
 }
 
 // float left style for sidebar callouts
