@@ -11,7 +11,7 @@ permalink: /accountability-ecosystem-kenya/
 
 <section id="government" class="government constituent">
   <div class="wrapper content">
-  <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_government@2x.png" alt="Illustration of government actors in Kenya"/>
+  <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_government.svg" alt="Illustration of government actors in Kenya"/>
   {% capture government %}{% include /content/2.1_government.md %}{% endcapture %}
     {{ government | markdownify }}
   </div>
@@ -31,7 +31,7 @@ permalink: /accountability-ecosystem-kenya/
 
 <section id="citizens" class="citizens constituent">
   <div class="wrapper content">
-    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens@2x.png" alt="Illustration of citizens in Kenya"/>
+    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens.svg" alt="Illustration of citizens in Kenya"/>
     {% capture citizens %}{% include /content/2.2_citizens.md %}{% endcapture %}
       {{ citizens | markdownify }}
   </div>
@@ -51,7 +51,7 @@ permalink: /accountability-ecosystem-kenya/
 
 <section id="civilSociety" class="civilSociety constituent">
   <div class="wrapper content">
-    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_csos@2x.png" alt="Illustration of CSOs in Kenya"/>
+    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_csos.svg" alt="Illustration of CSOs in Kenya"/>
     {% capture civilSociety %}{% include /content/2.3_civilSociety.md %}{% endcapture %}
       {{ civilSociety | markdownify }}
   </div>
@@ -71,7 +71,7 @@ permalink: /accountability-ecosystem-kenya/
 
 <section id="media" class="media constituent">
   <div class="wrapper content">
-    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media@2x.png" alt="Illustration of media actors in Kenya"/>
+    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media.svg" alt="Illustration of media actors in Kenya"/>
     {% capture media %}{% include /content/2.4_media.md %}{% endcapture %}
       {{ media | markdownify }}
   </div>
