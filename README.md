@@ -2,15 +2,17 @@
 
 ## Structure
 
-### Images
 
-Images can be added to markdown files with the figure element via the [`jekyll-figure` plugin](https://github.com/paulrobertlloyd/jekyll-figure).
+## Functions
+[There are some Jekyll includes that serve as functions]
 
-```
-{% figure caption: "This is the caption" | class: "Classname" %}
-![Image]({{ site.baseurl }}/assets/img/testimage.jpg)
-{% endfigure %}
-```
+### Figures
+`{% include figure.html src="[the source, without site.baseurl]" %}`
+
+The figure function takes these parameters:
+- `src` (required)
+- `class` (optional)
+- `alt` (optional)
 
 Figures can be used without a class, or with `.fullWidth`.
 

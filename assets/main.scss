@@ -563,12 +563,14 @@ nav {
 .toc.toc {
   // background: $green;
   color: white;
+  counter-reset: item;
   float: left;
   margin-left: calc(-#{$tocWidth} + 2rem);
   padding: 1.8rem 0 1.8rem 0;
   position: sticky;
-  top: 5.8rem;
-  transition: 1s all ease;
+  top: calc(50vh - 4.5rem);
+  transform: translateY(-50%);
+  transition: .8s all ease;
   width: $tocWidth;
   z-index: 4;
 
@@ -585,6 +587,8 @@ nav {
 
   li {
 
+    position: relative;
+
     &:first-of-type {
       border-radius: 0 1rem 0 0;
       overflow: hidden;
@@ -593,6 +597,16 @@ nav {
     &:last-of-type {
       border-radius: 0 0 1rem 0;
       overflow: hidden;
+    }
+
+    &::after {
+      content: counter(item);
+      counter-increment: item;
+      font-family: $sansSerif;
+      position: absolute;
+      right: .8rem;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+      top: 1rem;
     }
   }
 
@@ -612,8 +626,8 @@ nav {
     }
 
     &:hover {
+      background: $lightGreen;
       color: $white;
-      opacity: .8;
     }
   }
 
@@ -621,7 +635,6 @@ nav {
   .nav-active.nav-active {
     background: $yellow;
     color: $darkBlue;
-    font-weight: 700;
   }
 }
 
