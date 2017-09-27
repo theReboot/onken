@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Why Fund Kenyan Media?
-permalink: /why-fund-kenyan-media/
+permalink: /why-foster-kenyan-independent-media/
 ---
 
 <section class="introduction wrapper content">
