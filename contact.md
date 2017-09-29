@@ -4,6 +4,6 @@ title: Contact
 permalink: /contact/
 ---
 
-#Contact
+# Contact
 
 Contact info goes here

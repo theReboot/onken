@@ -11,13 +11,6 @@ permalink: /why-foster-kenyan-independent-media/
 
 </section>
 
-<section id="aboutThisReport" class="wrapper content">
-
-{% capture aboutThisReport %}{% include /content/1.1_aboutThisReport.md %}{% endcapture %}
-  {{ aboutThisReport | markdownify }}
-
-</section>
-
 <section id="theoryOfChange" class="wrapper content">
 
 {% capture theoryOfChange %}{% include /content/1.2_theoryOfChange.md %}{% endcapture %}

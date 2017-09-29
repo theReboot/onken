@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Methodology
-permalink: /methodology/
+permalink: /respondents/
 ---
 
-# Methodology
+# List of Respondents
 
 Methodology info goes here
