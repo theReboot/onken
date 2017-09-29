@@ -4,7 +4,7 @@ title: Why Fund Kenyan Media?
 permalink: /why-foster-kenyan-independent-media/
 ---
 
-<section class="introduction wrapper content">
+<section id="introduction" class="introduction wrapper content">
 
 {% capture introduction %}{% include /content/1.0_introduction.md %}{% endcapture %}
   {{ introduction | markdownify }}
