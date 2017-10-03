@@ -468,6 +468,16 @@ blockquote {
   }
 }
 
+// overwriting ai2html's styles in the flyout box
+#g-ON_matrix-desktop,
+#g-ON_matrix-tablet,
+#g-ON_matrix-mobile {
+
+  .flyOut__inner__text p {
+    color: $black;
+  }
+}
+
 // navigation
 
 nav {

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Opportunities/Recommendations
-permalink: /opportunities-recommendations/
+permalink: /opportunities/
 ---
 
 <section class="introduction wrapper content">
