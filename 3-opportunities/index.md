@@ -14,3 +14,10 @@ permalink: /opportunities/
       {{ fundingPrinciples | markdownify }}
   </div>
 </section>
+<section>
+  <div class="wrapper content">
+    <div class="fullWidth">
+      {% include graphic-matrix.html %}
+    </div>
+  </div>
+</section>
