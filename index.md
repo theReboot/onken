@@ -8,7 +8,7 @@ layout: home
 <div class="homepageTitle">
   <h1>Big Title of the Report</h1>
   <span class="subheading">And here is a longer subheading. Very descriptive.</span>
-  <div class="button"><a href="{{ site.baseurl }}/why-fund-kenyan-media/">Read the Report</a></div>
+  <div class="button"><a href="{{ site.baseurl }}/why-foster-kenyan-independent-media/">Read the Report</a></div>
 </div>
 
 <img class="homepageImg" src="{{ site.baseurl }}/assets/img/ecosystem.png" />

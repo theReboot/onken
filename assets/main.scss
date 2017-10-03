@@ -475,6 +475,19 @@ blockquote {
 
   .flyOut__inner__text p {
     color: $black;
+
+    a:link,
+    a:active {
+      color: $green;
+    }
+
+    a:hover {
+      opacity: .8;
+    }
+
+    a:visited {
+      color: $lightGreen;
+    }
   }
 }
 
