@@ -33,8 +33,20 @@ $(document).ready(function(){
 
     // if the URL comes with an ID attached
     if (window.location.hash) {
-      // var activeID = window.location.hash.substring(1);
-      $('.flyOut__wrap').find(window.location.hash).addClass('flyOut__active');
+
+      var flyOutContent = $('.flyOut__wrap').find(window.location.hash);
+
+      // if that ID exists within a flyOut wrapper
+      if(flyOutContent.length) {
+
+        // open the flyout menu
+        flyOutContent.addClass('flyOut__active');
+
+        // prevent the body of the page from scrolling
+        $('body').addClass('no-scroll');
+
+      }
+
     }
 
     /**
