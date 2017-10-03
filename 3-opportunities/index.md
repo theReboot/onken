@@ -17,7 +17,7 @@ permalink: /opportunities/
 <section>
   <div class="wrapper content">
     <div class="fullWidth">
-      {% include graphic-matrix.html %}
+    {% include graphic-matrix.html %}
     </div>
   </div>
 </section>
