@@ -89,39 +89,39 @@ $(document).ready(function(){
       var firstSectionPos = $(firstSectionID).offset().top;
     }
 
-    $(window).scroll(function(){
-        var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-        var windowHeight = $(window).height(); // get the height of the window
-        var docHeight = $(document).height();
+    $(window).on('scroll', _.debounce(function() {
 
-        for (var i=0; i < aArray.length; i++) {
-            var theID = aArray[i];
-            var divPos = $(theID).offset().top; // get the offset of the div from the top of page
-            var divHeight = $(theID).height(); // get the height of the div in question
+      console.log("scrolled");
+      var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+      var windowHeight = $(window).height(); // get the height of the window
+      var docHeight = $(document).height();
 
-            if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
-                $("a[href='" + theID + "']").addClass("nav-active");
-                // URL rewrites
-                hashRewrite(theID);
-            } else {
-                $("a[href='" + theID + "']").removeClass("nav-active");
-            }
-        }
+      for (var i=0; i < aArray.length; i++) {
+          var theID = aArray[i];
+          var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+          var divHeight = $(theID).height(); // get the height of the div in question
 
-        if(windowPos + windowHeight == docHeight) {
-            if (!$("nav li:last-child a").hasClass("nav-active")) {
-                var navActiveCurrent = $(".nav-active").attr("href");
-                $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
-                $("nav li:last-child a").addClass("nav-active");
-            }
-        }
+          if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+              $("a[href='" + theID + "']").addClass("nav-active");
+              // URL rewrites
+              hashRewrite(theID);
+          } else {
+              $("a[href='" + theID + "']").removeClass("nav-active");
+          }
+      }
 
-        if(windowPos < firstSectionPos) {
-          hashRewrite();
-        }
+      if(windowPos + windowHeight == docHeight) {
+          if (!$("nav li:last-child a").hasClass("nav-active")) {
+              var navActiveCurrent = $(".nav-active").attr("href");
+              $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+              $("nav li:last-child a").addClass("nav-active");
+          }
+      }
 
-    });
-
+      if(windowPos < firstSectionPos) {
+        hashRewrite();
+      }
+    }, 100));
 
     // fly out sidebar
     $( ".flyOutButton, .flyOut__close, .g-flyOutButton").click(function() {
@@ -210,6 +210,11 @@ function hasScrolled() {
       // scrolling up below the nav bar
       else {
         $('.header').removeClass('header--up').addClass('header--down header--onlyNav');
+
+        // if you've scrolled up and stopped, remove the header down class after XX seconds
+        setTimeout(function() {
+          $('.header').removeClass('header--down').addClass('header--up');
+        }, 3000)
       }
     }
 
