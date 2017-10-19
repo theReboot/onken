@@ -29,8 +29,8 @@ img {
   padding: 0 $wrapperPad;
 
   @include breakpoint('mobile') {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: $wrapperPadMobile;
+    padding-right: $wrapperPadMobile;
   }
 }
 
@@ -404,10 +404,20 @@ blockquote {
 
 .twoColumnWrap.twoColumnWrap {
   max-width: calc((#{$maxWidth} * (2/3)) - (#{$wrapperPad}/2));
+
+  @include breakpoint('mobile') {
+    padding-left: $wrapperPadMobile;
+    padding-right: $wrapperPadMobile;
+    width: 100%;
+  }
 }
 
 .constituentCard {
   margin-left: calc(33% - (#{$wrapperPad} / 2));
+
+  @include breakpoint('mobile') {
+    margin: 0;
+  }
 }
 
 .constituentCard__top {
@@ -420,6 +430,10 @@ blockquote {
 
   & > * {
     margin-left: $wrapperPad;
+
+    @include breakpoint('mobile') {
+      margin-left: 0;
+    }
   }
 
   h2 {
