@@ -358,3 +358,8 @@ $('a').each(function() {
        });
    }
 });
+
+// load the lazy-loading library
+// https://css-tricks.com/lozad-js-performant-lazy-loading-images/
+const observer = lozad(); // lazy loads elements with default selector as ".lozad"
+observer.observe();

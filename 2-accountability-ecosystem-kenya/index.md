@@ -13,7 +13,7 @@ permalink: /accountability-ecosystem-kenya/
   <div class="constituentCard">
     <div class="constituentCard__top">
       <div class="twoColumnWrap">
-        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_government.svg" alt="Illustration of government actors in Kenya"/>
+        <img class="profile lozad" data-src="{{ site.baseurl }}/assets/img/on_illustration_government.svg" alt="Illustration of government actors in Kenya"/>
       </div>
     </div>
     <div class="constituentCard__bottom">
@@ -47,7 +47,7 @@ permalink: /accountability-ecosystem-kenya/
   <div class="constituentCard">
     <div class="constituentCard__top">
       <div class="twoColumnWrap">
-        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens.svg" alt="Illustration of citizens in Kenya"/>
+        <img class="profile lozad" data-src="{{ site.baseurl }}/assets/img/on_illustration_citizens.svg" alt="Illustration of citizens in Kenya"/>
       </div>
     </div>
     <div class="constituentCard__bottom">
@@ -81,7 +81,7 @@ permalink: /accountability-ecosystem-kenya/
   <div class="constituentCard">
     <div class="constituentCard__top">
       <div class="twoColumnWrap">
-        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_csos.svg" alt="Illustration of CSOs in Kenya"/>
+        <img class="profile lozad" data-src="{{ site.baseurl }}/assets/img/on_illustration_csos.svg" alt="Illustration of CSOs in Kenya"/>
       </div>
     </div>
     <div class="constituentCard__bottom">
@@ -115,7 +115,7 @@ permalink: /accountability-ecosystem-kenya/
   <div class="constituentCard">
     <div class="constituentCard__top">
       <div class="twoColumnWrap">
-        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media.svg" alt="Illustration of media actors in Kenya"/>
+        <img class="profile lozad" data-src="{{ site.baseurl }}/assets/img/on_illustration_media.svg" alt="Illustration of media actors in Kenya"/>
       </div>
     </div>
     <div class="constituentCard__bottom">

@@ -1,4 +1,9 @@
-<figure{% if include.class != nil  %} class="{{ include.class }}"{% endif %}>
+<!-- <figure{% if include.class != nil  %} class="{{ include.class }}"{% endif %}>
    <img src="{{ site.baseurl }}{{ include.src }}"{% if include.alt != nil  %} alt="{{ include.alt }}"{% endif %} />
+   {% if include.caption != nil %}<figcaption>{{ include.caption }}{% if include.source != nil %}<br /><span class="source">Source: {{ include.source }}</span>{% endif %}</figcaption>{% endif %}
+</figure> -->
+
+<figure{% if include.class != nil  %} class="{{ include.class }}"{% endif %}>
+   <img class="lozad" data-src="{{ site.baseurl }}{{ include.src }}"{% if include.alt != nil  %} alt="{{ include.alt }}"{% endif %} />
    {% if include.caption != nil %}<figcaption>{{ include.caption }}{% if include.source != nil %}<br /><span class="source">Source: {{ include.source }}</span>{% endif %}</figcaption>{% endif %}
 </figure>
