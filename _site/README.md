@@ -41,6 +41,10 @@ Include the flyOut function and pass in a title, and the variable content
 
 `_data/navigation.yml` is used to control the site's navigation. The top-level navigation, and sub-section navigation is managed in the same way. Sub-section URLs should point to the named anchor tags within each section's Markdown file.
 
+### Lazy Loading
+
+Images can be lazy-loaded via [Lozad.js](https://css-tricks.com/lozad-js-performant-lazy-loading-images/). Add the `lozad` class to an image, and replace `src` with `data-src`. It's that easy.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub.
