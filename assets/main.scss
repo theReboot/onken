@@ -54,7 +54,7 @@ img {
 .header--down {
   height: $headerNavHeight; // this is defined for the transition to animate
   position: fixed;
-  top: 0;
+  top: -1px;
   padding: 0;
   width: 100%;
   z-index: 5;
@@ -86,19 +86,11 @@ img {
 
 .header__logo {
   display: block;
-  font-family: $sansSerif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: auto;
-  opacity: .2;
-  padding: 0 0 1.5rem;
+  float: left;
+  margin: 1.2rem auto 0;
   text-align: center;
   text-decoration: none;
-
-  // hide logo when header is fixed and down the page
-  .header--onlyNav & {
-    display: none;
-  }
+  width: 17rem;
 }
 
 main {
@@ -528,10 +520,11 @@ nav {
 .mainNav {
   border-top: 1px solid $grey;
   display: flex;
+  float: right;
   justify-content: space-between;
   line-height: 1;
   padding: 0 0 1rem;
-  width: 100%;
+  width: 66%;
 
   @include breakpoint('mobile') {
     flex-direction: column;
@@ -598,8 +591,9 @@ nav {
   color: $grey;
   display: block;
   font-family: $sansSerif;
-  font-size: 1rem;
+  font-size: .9rem;
   letter-spacing: 2px;
+  margin-bottom: .2rem;
   text-transform: uppercase;
 }
 
