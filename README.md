@@ -10,11 +10,16 @@
 `{% include figure.html src="[the source, without site.baseurl]" %}`
 
 The figure function takes these parameters:
-- `src` (required)
+- `src` (required; should be used without `{{ site.baseurl }}`, but takes a leading `/`)
 - `class` (optional)
 - `alt` (optional)
+- `caption` (optional)
+- `source` (optional)
 
-Figures can be used without a class, or with `.fullWidth`.
+Figures can be used without a class, or with:
+- `.fullWidth`
+- `.floatLeft` _(TBD)_
+- `.floatRight` _(TBD)_
 
 ### Fly-Out Features
 Throughout the report there are links to features, case studies, etc. that are separate from the narrative of the report. These features use the `flyOut.html` include, and pass in the Markdown file like this:

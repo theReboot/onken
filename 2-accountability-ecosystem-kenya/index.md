@@ -10,8 +10,22 @@ permalink: /accountability-ecosystem-kenya/
 </section>
 
 <section id="government" class="government constituent">
+  <div class="constituentCard">
+    <div class="constituentCard__top">
+      <div class="twoColumnWrap">
+        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_government.svg" alt="Illustration of government actors in Kenya"/>
+      </div>
+    </div>
+    <div class="constituentCard__bottom">
+      <div class="twoColumnWrap">
+        <h2>
+          <span class="preTitle">Constituent 1:</span>
+          <span class="title">Government</span>
+        </h2>
+      </div>
+    </div>
+  </div>
   <div class="wrapper content">
-  <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_government.svg" alt="Illustration of government actors in Kenya"/>
   {% capture government %}{% include /content/2.1_government.md %}{% endcapture %}
     {{ government | markdownify }}
   </div>
@@ -30,8 +44,22 @@ permalink: /accountability-ecosystem-kenya/
 </section>
 
 <section id="citizens" class="citizens constituent">
+  <div class="constituentCard">
+    <div class="constituentCard__top">
+      <div class="twoColumnWrap">
+        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens.svg" alt="Illustration of citizens in Kenya"/>
+      </div>
+    </div>
+    <div class="constituentCard__bottom">
+      <div class="twoColumnWrap">
+        <h2>
+          <span class="preTitle">Constituent 2:</span>
+          <span class="title">Citizens</span>
+        </h2>
+      </div>
+    </div>
+  </div>
   <div class="wrapper content">
-    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_citizens.svg" alt="Illustration of citizens in Kenya"/>
     {% capture citizens %}{% include /content/2.2_citizens.md %}{% endcapture %}
       {{ citizens | markdownify }}
   </div>
@@ -50,8 +78,22 @@ permalink: /accountability-ecosystem-kenya/
 </section>
 
 <section id="civilSociety" class="civilSociety constituent">
+  <div class="constituentCard">
+    <div class="constituentCard__top">
+      <div class="twoColumnWrap">
+        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_csos.svg" alt="Illustration of CSOs in Kenya"/>
+      </div>
+    </div>
+    <div class="constituentCard__bottom">
+      <div class="twoColumnWrap">
+        <h2>
+          <span class="preTitle">Constituent 3:</span>
+          <span class="title">Civil Society</span>
+        </h2>
+      </div>
+    </div>
+  </div>
   <div class="wrapper content">
-    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_csos.svg" alt="Illustration of CSOs in Kenya"/>
     {% capture civilSociety %}{% include /content/2.3_civilSociety.md %}{% endcapture %}
       {{ civilSociety | markdownify }}
   </div>
@@ -70,8 +112,22 @@ permalink: /accountability-ecosystem-kenya/
 </section>
 
 <section id="media" class="media constituent">
+  <div class="constituentCard">
+    <div class="constituentCard__top">
+      <div class="twoColumnWrap">
+        <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media.svg" alt="Illustration of media actors in Kenya"/>
+      </div>
+    </div>
+    <div class="constituentCard__bottom">
+      <div class="twoColumnWrap">
+        <h2>
+          <span class="preTitle">Constituent 4:</span>
+          <span class="title">Media</span>
+        </h2>
+      </div>
+    </div>
+  </div>
   <div class="wrapper content">
-    <img class="profile" src="{{ site.baseurl }}/assets/img/on_illustration_media.svg" alt="Illustration of media actors in Kenya"/>
     {% capture media %}{% include /content/2.4_media.md %}{% endcapture %}
       {{ media | markdownify }}
   </div>

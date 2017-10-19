@@ -120,9 +120,15 @@ figure {
   margin: 2rem 0 4rem;
 
   figcaption {
-    font-family: $sansSerif;
+    font-family: $serif;
+    line-height: 1.3;
     margin: 1rem 0 2rem 0;
-    text-align: right;
+    text-align: left;
+  }
+
+  .source {
+    font-style: italic;
+    opacity: .5;
   }
 
   & > img {
@@ -396,12 +402,30 @@ blockquote {
   }
 }
 
-// This is for the H2 tags on the part 2 page, with white blocks
-.block {
+.twoColumnWrap.twoColumnWrap {
+  max-width: calc((#{$maxWidth} * (2/3)) - (#{$wrapperPad}/2));
+}
+
+.constituentCard {
+  margin-left: calc(33% - (#{$wrapperPad} / 2));
+}
+
+.constituentCard__top {
+  // background: $lightBlue;
+}
+
+.constituentCard__bottom {
   background: $white;
-  color: $darkBlue;
-  margin-top: 0;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0 0;
+
+  & > * {
+    margin-left: $wrapperPad;
+  }
+
+  h2 {
+    color: $darkBlue;
+    margin-top: 0;
+  }
 
   .preTitle {
     display: block;
@@ -425,6 +449,12 @@ blockquote {
     }
   }
 }
+
+// This is for the H2 tags on the part 2 page, with white blocks
+// .block {
+//   color: $darkBlue;
+//   margin-top: 0;
+// }
 
 .constituent > .content:first-child {
   padding-bottom: 3rem;
@@ -481,6 +511,10 @@ blockquote {
 
   h3 {
     color: $darkBlue;
+  }
+
+  h4 {
+    color: $green;
   }
 
   p {
@@ -959,7 +993,7 @@ nav {
 }
 
 .flyOut__inner__text {
-  padding: 3.5rem 1.5rem;
+  padding: 3.5rem 2.5rem;
 
   .flyOut__active & {
     left: 0;
@@ -1120,9 +1154,6 @@ nav {
 // styles for illustrations in pt. 2
 .profile {
   display: block;
-
-  // this is because profile images have a margin left of 33%
-  width: 66%;
 
   @include breakpoint('mobile') {
     // when on mobile should span full width
