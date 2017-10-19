@@ -54,7 +54,7 @@ img {
 .header--down {
   height: $headerNavHeight; // this is defined for the transition to animate
   position: fixed;
-  top: 0;
+  top: -1px;
   padding: 0;
   width: 100%;
   z-index: 5;
@@ -86,19 +86,11 @@ img {
 
 .header__logo {
   display: block;
-  font-family: $sansSerif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: auto;
-  opacity: .2;
-  padding: 0 0 1.5rem;
+  float: left;
+  margin: 1.2rem auto 0;
   text-align: center;
   text-decoration: none;
-
-  // hide logo when header is fixed and down the page
-  .header--onlyNav & {
-    display: none;
-  }
+  width: 17rem;
 }
 
 main {
@@ -128,9 +120,15 @@ figure {
   margin: 2rem 0 4rem;
 
   figcaption {
-    font-family: $sansSerif;
+    font-family: $serif;
+    line-height: 1.3;
     margin: 1rem 0 2rem 0;
-    text-align: right;
+    text-align: left;
+  }
+
+  .source {
+    font-style: italic;
+    opacity: .5;
   }
 
   & > img {
@@ -265,7 +263,7 @@ h1 {
 h2 {
   color: $yellow;
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
   padding: 0 0 1rem 0;
 
@@ -295,8 +293,17 @@ h3 {
 }
 
 h4 {
+  color: $white;
   font-size: 1.5rem;
-  opacity: .6;
+  margin-bottom: 1rem;
+
+  .bg--lightGrey & {
+    color: $darkBlue;
+  }
+
+  .bg--white & {
+    color: $darkBlue;
+  }
 }
 
 h5 {
@@ -309,13 +316,24 @@ p {
   line-height: 1.5;
   margin: 0 0 1rem 0;
 
-  a:link,
-  a:active {
-    color: $yellow;
-  }
+  a {
+    transition: .2s all ease;
+    border-color: rgba(236,239,134,0); // this is the RGBA version of yellow, but transparent
 
-  a:visited {
-    color: $darkYellow;
+    &:link,
+    &:active {
+      color: $yellow;
+      text-decoration: none;
+    }
+
+    &:hover {
+      border-bottom: 1px solid;
+      border-color: rgba(236,239,134,1); // this is the RGBA version of yellow;
+    }
+
+    &:visited {
+      color: $darkYellow;
+    }
   }
 }
 
@@ -384,16 +402,35 @@ blockquote {
   }
 }
 
-// This is for the H2 tags on the part 2 page, with white blocks
-.block {
+.twoColumnWrap.twoColumnWrap {
+  max-width: calc((#{$maxWidth} * (2/3)) - (#{$wrapperPad}/2));
+}
+
+.constituentCard {
+  margin-left: calc(33% - (#{$wrapperPad} / 2));
+}
+
+.constituentCard__top {
+  // background: $lightBlue;
+}
+
+.constituentCard__bottom {
   background: $white;
-  color: $darkBlue;
-  margin-top: 0;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0 0;
+
+  & > * {
+    margin-left: $wrapperPad;
+  }
+
+  h2 {
+    color: $darkBlue;
+    margin-top: 0;
+  }
 
   .preTitle {
     display: block;
     font-size: 1.6rem;
+    font-weight: 500;
     letter-spacing: 5px;
     opacity: .5;
     text-transform: uppercase;
@@ -412,6 +449,12 @@ blockquote {
     }
   }
 }
+
+// This is for the H2 tags on the part 2 page, with white blocks
+// .block {
+//   color: $darkBlue;
+//   margin-top: 0;
+// }
 
 .constituent > .content:first-child {
   padding-bottom: 3rem;
@@ -463,8 +506,19 @@ blockquote {
   h5,
   h6,
   p {
-    color: $black;
     font-family: $sansSerif;
+  }
+
+  h3 {
+    color: $darkBlue;
+  }
+
+  h4 {
+    color: $green;
+  }
+
+  p {
+    color: $black;
   }
 }
 
@@ -500,10 +554,11 @@ nav {
 .mainNav {
   border-top: 1px solid $grey;
   display: flex;
+  float: right;
   justify-content: space-between;
   line-height: 1;
   padding: 0 0 1rem;
-  width: 100%;
+  width: 66%;
 
   @include breakpoint('mobile') {
     flex-direction: column;
@@ -570,8 +625,9 @@ nav {
   color: $grey;
   display: block;
   font-family: $sansSerif;
-  font-size: 1rem;
+  font-size: .9rem;
   letter-spacing: 2px;
+  margin-bottom: .2rem;
   text-transform: uppercase;
 }
 
@@ -615,7 +671,7 @@ nav {
     position: relative;
 
     &:first-of-type {
-      border-radius: 0 1rem 0 0;
+      border-radius: 0 .5rem 0 0;
       overflow: hidden;
 
       @include breakpoint(mobile) {
@@ -624,7 +680,7 @@ nav {
     }
 
     &:last-of-type {
-      border-radius: 0 0 1rem 0;
+      border-radius: 0 0 .5rem 0;
       overflow: hidden;
 
       @include breakpoint(mobile) {
@@ -734,13 +790,21 @@ nav {
   background: $white;
   color: $black;
 
-  a:link,
-  a:active {
-    color: $grey;
-  }
+  a {
+    border-color: rgba(159,159,165,0); // this is the RGBA version of $grey, but transparent
 
-  a:visited {
-    color: $darkBlue;
+    &:link,
+    &:active {
+      color: $grey;
+    }
+
+    &:visited {
+      color: $darkBlue;
+    }
+
+    &:hover {
+      border-color: rgba(159,159,165,1); // this is the RGBA version of $grey
+    }
   }
 }
 
@@ -753,13 +817,21 @@ nav {
   background: $lightGrey;
   color: $black;
 
-  a:link,
-  a:active {
-    color: $grey;
-  }
+  a {
+    border-color: rgba(159,159,165,0); // this is the RGBA version of $grey, but transparent
 
-  a:visited {
-    color: $darkBlue;
+    &:link,
+    &:active {
+      color: $grey;
+    }
+
+    &:visited {
+      color: $darkBlue;
+    }
+
+    &:hover {
+      border-color: rgba(159,159,165,1); // this is the RGBA version of $grey
+    }
   }
 }
 
@@ -798,8 +870,10 @@ nav {
 
   a {
     border-top: 1px solid $black;
+    color: $black;
     display: block;
     padding: 1rem 0;
+    text-decoration: none;
   }
 }
 
@@ -813,16 +887,20 @@ nav {
   @include breakpoint('mobile') {
     flex-direction: column;
   }
-}
 
-.footer__logos__logo {
-  width: 29%;
-  max-width: 16rem;
+  & > img {
+    width: 29%;
+    max-width: 16rem;
 
-  @include breakpoint('mobile') {
-    margin: 1rem auto;
-    padding: 0;
-    width: 100%;
+    @include breakpoint('mobile') {
+      margin: 1rem auto;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .footer__logos__reboot {
+    max-width: 13rem;
   }
 }
 
@@ -915,7 +993,7 @@ nav {
 }
 
 .flyOut__inner__text {
-  padding: 3.5rem 1.5rem;
+  padding: 3.5rem 2.5rem;
 
   .flyOut__active & {
     left: 0;
@@ -1076,9 +1154,6 @@ nav {
 // styles for illustrations in pt. 2
 .profile {
   display: block;
-
-  // this is because profile images have a margin left of 33%
-  width: 66%;
 
   @include breakpoint('mobile') {
     // when on mobile should span full width

@@ -91,7 +91,6 @@ $(document).ready(function(){
 
     $(window).on('scroll', _.debounce(function() {
 
-      console.log("scrolled");
       var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
       var windowHeight = $(window).height(); // get the height of the window
       var docHeight = $(document).height();
@@ -103,13 +102,12 @@ $(document).ready(function(){
 
           if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
               $("a[href='" + theID + "']").addClass("nav-active");
-              // URL rewrites
               hashRewrite(theID);
           } else {
               $("a[href='" + theID + "']").removeClass("nav-active");
           }
       }
-
+      // if you're at the bottom of the page;
       if(windowPos + windowHeight == docHeight) {
           if (!$("nav li:last-child a").hasClass("nav-active")) {
               var navActiveCurrent = $(".nav-active").attr("href");
@@ -143,8 +141,6 @@ $(document).ready(function(){
         $('body').addClass('no-scroll');
         // URL rewrites
         hashRewrite('#' + flyOutID)
-        // window.history.pushState({}, currentDomain, currentPath + '#' + flyOutID);
-        // return false;
 
       }
     })
@@ -169,6 +165,7 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var headerHeight = $('.header__wrap').outerHeight();
+var windowHeight = $(window).height();
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -204,21 +201,26 @@ function hasScrolled() {
       // if we're above the wrapper, and above the nav wrapper
       if (st < headerHeight) {
         $('.header').removeClass('header--down header--up header--onlyNav');
-      } else if ($(window).height() > st > headerHeight) {
+      }
+      else if (windowHeight > st > headerHeight) {
 
       }
       // scrolling up below the nav bar
       else {
         $('.header').removeClass('header--up').addClass('header--down header--onlyNav');
 
-        // if you've scrolled up and stopped, remove the header down class after XX seconds
-        setTimeout(function() {
-          $('.header').removeClass('header--down').addClass('header--up');
-        }, 3000)
+        // // if we're below the fold
+        // if (st > windowHeight ) {
+        //   console.log("WE'RE BELOW THE FOLD: " + st + " > " + headerHeight);
+        //     // remove the header down class after XX seconds
+        //     setTimeout(function() {
+        //       $('.header').removeClass('header--down').addClass('header--up');
+        //     }, 3000)
+        // }
       }
     }
 
-    if ((st + $(window).height()) == $(document).height()) {
+    if ((st + windowHeight) == $(document).height()) {
       $('.header').removeClass('header--up').addClass('header--down header--onlyNav');
     }
 
