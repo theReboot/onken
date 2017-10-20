@@ -441,19 +441,6 @@ blockquote {
     margin-top: 0;
   }
 
-  .preTitle {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 500;
-    letter-spacing: 5px;
-    opacity: .5;
-    text-transform: uppercase;
-
-    @include breakpoint('mobile') {
-      font-size: 1.3rem;
-    }
-  }
-
   .title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -461,6 +448,19 @@ blockquote {
     @include breakpoint('mobile') {
       font-size: 2.5rem;
     }
+  }
+}
+
+.preTitle {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  opacity: .5;
+  text-transform: uppercase;
+
+  @include breakpoint('mobile') {
+    font-size: 1.3rem;
   }
 }
 
