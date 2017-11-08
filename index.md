@@ -6,8 +6,8 @@ layout: home
 ---
 
 <div class="homepageTitle">
-  <h1>Big Title of the Report</h1>
-  <span class="subheading">And here is a longer subheading. Very descriptive.</span>
+  <h1>Stronger Media, Fairer Kenya</h1>
+  <span class="subheading">A Vision for Kenyan Independent Media</span>
   <div class="button"><a href="{{ site.baseurl }}/why-foster-kenyan-independent-media/">Read the Report</a></div>
 </div>
 
