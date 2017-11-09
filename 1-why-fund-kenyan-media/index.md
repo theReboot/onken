@@ -24,3 +24,7 @@ permalink: /why-foster-kenyan-independent-media/
   {{ understandingKenyanMedia | markdownify }}
 
 </section>
+
+<div class="nextSection">
+<a href="{{ site.baseurl }}/accountability-ecosystem-kenya/">Next: The Accountability Ecosystem in Kenya Today</a>
+</div>

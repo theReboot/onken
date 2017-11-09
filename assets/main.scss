@@ -540,6 +540,24 @@ blockquote {
   }
 }
 
+.nextSection {
+  display: block;
+  font-size: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 32rem;
+
+  a {
+    &:active,
+    &:hover,
+    &:link,
+    &:visited {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
 // overwriting ai2html's styles in the flyout box
 #g-ON_matrix-desktop,
 #g-ON_matrix-tablet,

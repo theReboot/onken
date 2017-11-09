@@ -155,3 +155,7 @@ permalink: /accountability-ecosystem-kenya/
       {{ copingStrategies | markdownify }}
   </div>
 </section>
+
+<div class="nextSection">
+<a href="{{ site.baseurl }}/opportunities/">Next: Opportunities</a>
+</div>

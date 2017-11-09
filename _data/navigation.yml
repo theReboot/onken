@@ -13,14 +13,14 @@ toc:
     preTitle: Part 2
     url: /accountability-ecosystem-kenya/
     subpageitems:
+      - section: Media
+        anchorurl: media
       - section: Government
         anchorurl: government
       - section: Citizens
         anchorurl: citizens
       - section: Civil Society
         anchorurl: civilSociety
-      - section: Media
-        anchorurl: media
   - page: Opportunities
     preTitle: Part 3
     url: /opportunities/
