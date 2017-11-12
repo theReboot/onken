@@ -597,7 +597,12 @@ nav {
   width: 66%;
 
   @include breakpoint('mobile') {
+    clear: both;
     flex-direction: column;
+    float: left;
+    display: none; // this is handled in the javascript
+    margin-top: 2rem;
+    width: 100%;
   }
 
   a {
@@ -610,6 +615,7 @@ nav {
     text-decoration: none;
 
     @include breakpoint('mobile') {
+      display: block;
       margin: 0 auto 1rem;
       width: 100%;
     }
@@ -672,6 +678,17 @@ nav {
   font-size: 1.2rem;
   font-weight: 700;
   max-width: 16rem;
+}
+
+.mainNav__button {
+  display: none;
+
+  @include breakpoint('mobile') {
+    color: $darkBlue;
+    display: block;
+    float: right;
+    font-size: 2rem;
+  }
 }
 
 // added extra classes for specificity

@@ -31,6 +31,17 @@ function hashRewrite(path) {
 
 $(document).ready(function(){
 
+    $(".mainNav").addClass("js").before('<div class="mainNav__button">&#9776;</div>');
+    $(".mainNav__button").click(function(){
+      $(".mainNav").slideToggle();
+    });
+    $(window).resize(function(){
+      if(window.innerWidth > 600) {
+        $(".mainNav").removeAttr("style");
+      }
+    });
+
+
     // if the URL comes with an ID attached
     if (window.location.hash) {
 
