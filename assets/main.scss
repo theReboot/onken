@@ -1065,12 +1065,13 @@ nav {
 }
 
 .flyOut__close {
+  cursor: pointer;
+  pointer-events: all;
 
   // only visible when flyOut box is active
   .flyOut__active & {
     background: $lightGrey;
     border: 2px solid $black;
-    cursor: pointer;
     display: block;
     font-family: $sansSerif;
     padding: .6rem .7rem .5rem;
