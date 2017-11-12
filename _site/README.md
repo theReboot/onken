@@ -34,7 +34,7 @@ Markdownify the variable
 ```
 Include the flyOut function and pass in a title, and the variable content
 ```
-{% include flyOut.html title="Case Study: A Closer Look At Fly-Out Features" content=variableName %}
+{% include flyOut.html type="Case Study:" title="A Closer Look At Fly-Out Features" content=variableName %}
 ```
 
 ### Navigation

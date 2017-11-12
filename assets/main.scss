@@ -964,6 +964,7 @@ nav {
   font-size: 1.6rem;
   margin: 1rem 0;
   padding: 1.2rem 1.5rem;
+  position: relative;
   transition: .2s all ease;
 
   &:hover {
@@ -993,6 +994,16 @@ nav {
 
   .button__title {
 
+  }
+}
+
+.button.flyOutButton {
+  &::before {
+    content: '➔';
+    opacity: .3;
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
   }
 }
 
