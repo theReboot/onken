@@ -137,12 +137,6 @@ permalink: /accountability-ecosystem-kenya/
       {{ incentives | markdownify }}
     </div>
   </div>
-  <div class="bg--lightGrey">
-    <div class="wrapper content">
-    {% capture copingStrategies %}{% include /content/2.4.2_copingStrategies.md %}{% endcapture %}
-      {{ copingStrategies | markdownify }}
-    </div>
-  </div>
 </section>
 
 <section>
@@ -151,8 +145,12 @@ permalink: /accountability-ecosystem-kenya/
       {{ media | markdownify }}
     {% capture incentives %}{% include /content/2.5.1_incentives.md %}{% endcapture %}
       {{ incentives | markdownify }}
-    {% capture copingStrategies %}{% include /content/2.5.2_copingStrategies.md %}{% endcapture %}
-      {{ copingStrategies | markdownify }}
+  </div>
+  <div class="bg--lightGrey">
+    <div class="wrapper content">
+    {% capture conclusion %}{% include /content/2.6_conclusion.md %}{% endcapture %}
+      {{ conclusion | markdownify }}
+    </div>
   </div>
 </section>
 
