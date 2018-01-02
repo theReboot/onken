@@ -376,6 +376,15 @@ blockquote {
   }
 }
 
+.content a[target="_blank"]::after {
+  content: '';
+  background: no-repeat url('img/externalArrow.png');
+  display: inline-block;
+  height: 10px;
+  margin: 0 3px 0 5px;
+  width: 10px;
+}
+
 .subheading {
   color: $black;
   font-family: $serif;

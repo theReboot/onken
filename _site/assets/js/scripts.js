@@ -367,6 +367,7 @@ $('a').each(function() {
            event.stopPropagation();
            window.open(this.href, '_blank');
        });
+       // TODO: change this from click function to one that adds target="_blank" to all links (for css selection)
    }
 });
 
