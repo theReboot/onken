@@ -6,9 +6,9 @@ layout: home
 ---
 
 <div class="homepageTitle">
-  <h1>Stronger Media, Fairer Kenya</h1>
-  <span class="subheading">A Vision for Kenyan Independent Media</span>
-  <div class="button"><a href="{{ site.baseurl }}/why-foster-kenyan-independent-media/">Read the Report</a></div>
+  <h1>How Journalism Can Thrive</h1>
+  <span class="subheading">Insights and Opportunities for Strengthening Kenya’s Media Ecosystem</span>
+<div class="button"><a href="{{ site.baseurl }}/why-foster-kenyan-independent-media/">Read the Report</a></div>
 </div>
 
 <img class="homepageImg" src="{{ site.baseurl }}/assets/img/ecosystem.png" />
