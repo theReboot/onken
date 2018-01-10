@@ -950,7 +950,8 @@ nav {
     flex-direction: column;
   }
 
-  & > img {
+  & > img,
+  & > a {
     width: 29%;
     max-width: 18rem;
 
