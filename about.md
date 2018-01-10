@@ -6,7 +6,7 @@ permalink: /about/
 
 # About the Report
 
-The research outlined in this report was commissioned by the Omidyar Network to understand the current state of Kenyan media, and to identify opportunities to support independent media.
+The research outlined in this report was commissioned by Omidyar Network to understand the current state of Kenyan media, and to identify opportunities to support independent media.
 
 This report is meant to be a starting point for further exploration and investment. We hope the findings detailed here will inspire media actors, entrepreneurs, and others to give the Kenyan media ecosystem the scrutiny---and the support---needed for accountability to flourish.
 
