@@ -6,4 +6,4 @@ permalink: /contact/
 
 # Contact
 
-Contact info goes here
+For more information about this report contact [kenyamedia@omidyar.com](mailto:kenyamedia@omidyar.com). For more information about [Reboot](https://reboot.org) contact [hello@reboot.org](mailto:hello@reboot.org).
