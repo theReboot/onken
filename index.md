@@ -6,8 +6,8 @@ layout: home
 ---
 
 <div class="homepageTitle">
-  <h1>How Journalism Can Thrive</h1>
-  <span class="subheading">Insights and Opportunities for Strengthening Kenya’s Media Ecosystem</span>
+  <h1>Strengthening Kenyan Media</h1>
+  <span class="subheading">Exploring a Path Towards Journalism in the Public Interest</span>
 <div class="button"><a href="{{ site.baseurl }}/why-foster-kenyan-independent-media/">Read the Report</a></div>
 </div>
 
