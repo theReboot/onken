@@ -318,7 +318,8 @@ h5 {
   font-size: 1.2rem;
 }
 
-p {
+p,
+#g-ON_matrix_v2-box .flyOut__inner__text.flyOut__inner__text p {
   font-family: $sansSerif;
   font-size: 1.14rem;
   line-height: 1.55;
@@ -529,7 +530,8 @@ blockquote {
 
 // typography for the flyOut box
 // doubled up so it doesn't compete with ai2html graphic specificity
-.flyOut__inner__text.flyOut__inner__text {
+.flyOut__inner__text.flyOut__inner__text,
+#g-ON_matrix_v2-box .flyOut__inner__text.flyOut__inner__text {
   h1,
   h2,
   h3,
@@ -567,29 +569,6 @@ blockquote {
     &:visited {
       color: $white;
       text-decoration: none;
-    }
-  }
-}
-
-// overwriting ai2html's styles in the flyout box
-#g-ON_matrix-desktop,
-#g-ON_matrix-tablet,
-#g-ON_matrix-mobile {
-
-  .flyOut__inner__text p {
-    color: $black;
-
-    a:link,
-    a:active {
-      color: $green;
-    }
-
-    a:hover {
-      opacity: .8;
-    }
-
-    a:visited {
-      color: $lightGreen;
     }
   }
 }
