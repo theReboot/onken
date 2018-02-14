@@ -141,17 +141,14 @@ permalink: /accountability-ecosystem-kenya/
 
 <section>
   <div class="wrapper content">
-    {% capture media %}{% include /content/2.5_localJournalism.md %}{% endcapture %}
-      {{ media | markdownify }}
-    {% capture incentives %}{% include /content/2.5.1_incentives.md %}{% endcapture %}
-      {{ incentives | markdownify }}
-  </div>
-  <div class="bg--lightGrey">
-    <div class="wrapper content">
-    {% capture conclusion %}{% include /content/2.6_conclusion.md %}{% endcapture %}
+    {% capture conclusion %}{% include /content/2.5_conclusion.md %}{% endcapture %}
       {{ conclusion | markdownify }}
-    </div>
   </div>
+  <!-- <div class="bg--lightGrey">
+    <div class="wrapper content">
+
+    </div>
+  </div> -->
 </section>
 
 <div class="nextSection">
