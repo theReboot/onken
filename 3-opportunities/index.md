@@ -10,6 +10,7 @@ permalink: /opportunities/
 </section>
 <section>
   <div class="wrapper content">
+    <h2>Specific opportunities</h2>
     <div class="fullWidth">
     {% include graphic-matrix.html %}
     </div>
