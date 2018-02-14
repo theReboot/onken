@@ -12,13 +12,8 @@ permalink: /opportunities/
   <div class="wrapper content">
     <h2>Specific opportunities</h2>
     <div class="fullWidth">
+    {% include graphic-matrix-content.html %}
     {% include graphic-matrix.html %}
     </div>
-  </div>
-</section>
-<section>
-  <div class="wrapper content">
-    {% capture fundingPrinciples %}{% include /content/3.1_fundingPrinciples.md %}{% endcapture %}
-      {{ fundingPrinciples | markdownify }}
   </div>
 </section>

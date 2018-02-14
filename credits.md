@@ -6,16 +6,15 @@ permalink: /credits/
 
 # Credits
 
-Credits here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales malesuada dictum. Nullam elit arcu, venenatis egestas viverra ac, mattis id elit.
+### Disclaimer
 
-## Heading 2
+While Omidyar Network is pleased to sponsor this report, the conclusions, opinions, or points of view expressed in the report are those of the authors and do not necessarily represent the views of Omidyar Network.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales malesuada dictum. Nullam elit arcu, venenatis egestas viverra ac, mattis id elit.
+### Authors
+Kate Reed Petty, Emily Herrick, Asch Harwood, Panthea Lee, Wilson Ugangu
 
-### Heading 3
+### Researchers
+Emily Herrick, Asch Harwood, Wilson Ugangu, Winnie Kammu
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales malesuada dictum. Nullam elit arcu, venenatis egestas viverra ac, mattis id elit.
-
-#### Heading 4
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales malesuada dictum. Nullam elit arcu, venenatis egestas viverra ac, mattis id elit.
+### Designers
+Adam Parker, Emily Herrick
