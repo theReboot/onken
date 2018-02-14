@@ -14,7 +14,7 @@ First and foremost, we want to thank all of the respondents, who were willing to
 
 Likewise, we want to thank our researchers, Wilson Ugangu and Winnie Kammu. This research would not have been possible without them. They handled the long days and piles of sticky notes with grace and ease, all the while finding the right people to speak with and contributing thoughtful, nuanced context and analysis. Perhaps, more importantly, they were welcoming hosts and great company!
 
-Thank you as well to Peter Okongo, Anthony Walfula, and William Janak Oloo, who all provided helpful comments on early drafts of the report, and to the 25 journalists, editors, civil society members, and academics who came to our event in January to provide additional feedback on the research Our report is better because of all their efforts.
+Thank you as well to Peter Okongo, Anthony Walfula, and William Janak Oloo, who all provided helpful comments on early drafts of the report, and to the 25 journalists, editors, civil society members, and academics who came to our event in January to provide additional feedback on the research. Our report is better because of all their efforts.
 
 Finally, we would like to thank Ory Okolloh and Wendy Trott of Omidyar Network for their guidance, feedback, and patience.
 
@@ -26,7 +26,7 @@ While Omidyar Network is pleased to sponsor this report, the conclusions, opinio
 Kate Reed Petty, Emily Herrick, Asch Harwood, Panthea Lee, Wilson Ugangu
 
 ### Researchers
-Emily Herrick, Asch Harwood, Wilson Ugangu, Winnie Kammu
+Emily Herrick, Asch Harwood, Wilson Ugangu, Winnie Kamau
 
 ### Designers
 Adam Parker, Emily Herrick
