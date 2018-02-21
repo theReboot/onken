@@ -23,10 +23,17 @@ Finally, we would like to thank Ory Okolloh and Wendy Trott of Omidyar Network f
 While Omidyar Network and Hewlett Foundation are pleased to sponsor this report, the conclusions, opinions, or points of view expressed in the report are those of the authors and do not necessarily represent the views of Omidyar Network.
 
 ### Authors
-Kate Reed Petty, Emily Herrick, Asch Harwood, Panthea Lee, Wilson Ugangu
+
+Asch Harwood, Emily Herrick, Wilson Ugangu
+
+### Editors
+
+Panthea Lee, Kate Reed Petty
 
 ### Researchers
-Emily Herrick, Asch Harwood, Wilson Ugangu, Winnie Kamau
 
-### Designers
-Adam Parker, Emily Herrick
+Asch Harwood, Emily Herrick, Winnie Kamau, Wilson Ugangu
+
+### Designer
+
+Adam Parker
